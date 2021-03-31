@@ -3,6 +3,15 @@ body {
   line-height: 1.8;
   color: $default;
   @extend %dmsansregular-400;
+  background-color: #ffffff;
+}
+
+a {
+  display: inline-block;
+}
+
+button {
+  cursor: pointer;
 }
 
 .button {
@@ -12,7 +21,19 @@ body {
   color: #ffffff;
   @extend %rubikmedium-500;
   border: 0;
-  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+.button:hover {
+  background-color: #b3ccd9;
+}
+
+.title {
+  @extend %dmsansbold-700;
+  font-size: 36px;
+  line-height: 1.2;
+  color: $title;
+  text-align: center;
 }
 
 .container {
