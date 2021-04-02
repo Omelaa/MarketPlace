@@ -21,22 +21,38 @@
   }
 
   &__item {
-    @extend %rubikmedium-500;
+    @include rubik(500);
 
     &:not(:last-child) {
       margin-right: 35px;
     }
   }
 
-  &__logo {
-    margin-right: 135px;
+  &__link {
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+    @include text-clamp(1);
+    max-width: 100px;
+
+    &:hover {
+      border-bottom: 1px solid $button;
+    }
   }
 
-  &-actions {
+  &__logo {
+    margin-right: 135px;
+    max-width: 180px;
+    height: 50px;
+  }
+
+  .header-actions {
+    display: flex;
+
     &__btn {
       border: 0;
-      padding: 15px;
+      padding: 15px 17px;
       border-radius: 50%;
+      transition: background-color 0.5s;
 
       &:first-child {
         background-color: #edf1f4;
@@ -46,16 +62,19 @@
         background-color: #a3bbc8;
       }
 
+      path {
+        transition: fill 0.5s;
+      }
+
       &:hover {
         path {
-          transition: fill 0.5s;
-          fill: #f9fafb;
+          fill: #b3ccd9;
         }
       }
     }
 
     &__wrapper {
-      background-color: #fcd7b6;
+      background-color: $bg;
       position: relative;
       width: 180px;
       height: 50px;
@@ -64,20 +83,18 @@
       justify-content: center;
       margin: 0;
 
-      & .header-actions__btn {
-        background-color: #fcd7b6;
-        padding: 0 20px;
+      .header-actions__btn {
+        background-color: $bg;
         position: relative;
       }
-
     }
 
     &__count {
       position: absolute;
       width: 16px;
       height: 16px;
-      top: -5px;
-      left: 33px;
+      top: 9px;
+      left: 28px;
       border-radius: 50%;
       background-color: rgb(255, 255, 255);
       text-align: center;
@@ -86,7 +103,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      @extend %dmsansregular-400;
+      @include dmsans(400);
       color: #243f4d;
     }
 
@@ -98,7 +115,6 @@
     }
 
     &__wrapper,
-    &,
     &__btn {
       display: flex;
       align-items: center;
@@ -113,17 +129,18 @@
   }
 }
 
-.sofa {
+.blog {
 
-  &__inner {
-    padding: 70px 0;
-    background-color: #fcd7b6;
+  &__items {
+    padding: 60px 0 40px;
+    background-color: $bg;
   }
 
   &__wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
   }
 
   &__text {
@@ -136,17 +153,20 @@
     font-size: 18px;
     line-height: 1.6;
 
-    & span {
+    span {
       font-size: 72px;
       line-height: 0.9;
       color: #243f4d;
       display: block;
       margin-bottom: 40px;
-      @extend %rubikmedium-500;
+      @include rubik(500);
+      text-transform: uppercase;
+      @include text-clamp(2);
     }
 
-    & p {
+    p {
       max-width: 370px;
+      @include text-clamp(4);
     }
   }
 
@@ -171,7 +191,7 @@
   }
 
 
-  &-blog {
+  .blog-element {
     background-image: url(../images/sofa-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -214,9 +234,9 @@
         background-color: #fde3cc;
         font-size: 11px;
         line-height: 1.2;
-        @extend %rubikmedium-500;
+        @include rubik(500);
         color: $sofs;
-        transition: 0.5s;
+        transition: background-color 0.5s;
 
         &:hover {
           background-color: #ffffff;
@@ -241,21 +261,16 @@
     justify-content: space-around;
   }
 
-  &__title {
+  &__item {
     display: flex;
     flex-direction: column;
     color: #585858;
-    @extend %dmsansregular-400;
+    @include dmsans(400);
     position: relative;
-    max-width: 215px;
+    max-width: 265px;
     font-size: 16px;
     line-height: 1.9;
-
-    & span {
-      @extend %dmsansbold-700;
-      font-size: 18px;
-      line-height: 2.2;
-    }
+    padding-left: 50px;
 
     &::after {
       content: "";
@@ -265,8 +280,8 @@
       width: 20px;
       height: 21px;
       position: absolute;
-      top: 45px;
-      left: -40px;
+      top: 35px;
+      left: 12px;
     }
 
     &::before {
@@ -276,237 +291,179 @@
       width: 50px;
       height: 50px;
       position: absolute;
-      left: -72px;
-      top: 12px;
+      left: -20px;
+      top: 0;
     }
 
-    &-car {
+    &--car {
 
       &::after {
-        top: 40px;
-        left: -45px;
+        top: 28px;
+        left: 8px;
       }
 
       &::before {
         background-image: url(../images/delivery-truck.png);
-        left: -80px;
-        top: 20px;
+        left: -25px;
+        top: 10px;
       }
     }
 
-    &-credit::before {
+    &--credit::before {
       background-image: url(../images/credit-card.png);
+    }
+  }
+
+  &__title {
+    @include dmsans(700);
+    font-size: 18px;
+    line-height: 2.2;
+    @include text-clamp(2);
+  }
+
+  &__sub {
+    @include text-clamp(2);
+
+    span {
+      display: block;
     }
   }
 }
 
 .products {
-  padding: 75px 0;
+  padding: 45px 0 75px;
 
   &__title {
-    margin-bottom: 40px;
+    margin-bottom: 25px;
   }
 
-  &__btns {
-    text-align: center;
-    margin-bottom: 75px;
+  .products-block__btns {
+    margin-bottom: 70px;
+    display: flex;
+    justify-content: center;
+
+    & li:not(:last-child) {
+      margin-right: 15px;
+    }
   }
 
-  &__btn {
+  .products-block__btn {
     border: 0;
     background-color: inherit;
-    @extend %dmsansbold-700;
+    @include dmsans(700);
     color: #8b8b8b;
     transition: color 0.5s;
+    overflow: auto;
+    max-width: 100px;
 
-    &:focus,
     &:hover {
       color: #191919;
     }
 
-    &:not(:last-child) {
-      margin-right: 25px;
-    }
-  }
-
-  &__inner {
-    max-width: 1170px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 270px 270px 270px 270px;
-    grid-template-rows: repeat(380px);
-    grid-gap: 30px;
-
-  }
-
-  &__img {
-    margin: auto 0;
-    object-fit: cover;
-    display: flex;
-  }
-
-  &__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 270px;
-    min-height: 380px;
-    border-radius: 10px;
-    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
-    text-align: center;
-    padding: 25px;
-    position: relative;
-  }
-
-  &__name {
-    color: $sofs;
-    line-height: 2.5;
-    @extend %dmsansmedium-500;
-  }
-
-  &__price {
-    display: block;
-    color: $button;
-    @extend %dmsansbold-700;
-  }
-
-  &__box {
-    position: absolute;
-    bottom: 150px;
-    right: 50px;
-    display: flex;
-    opacity: 0;
-    transition: 0.5s;
-  }
-
-  &__item:hover {
-    .products__box {
-      opacity: 1;
-    }
-  }
-
-
-  &__button,
-  &__link {
-    width: 45px;
-    height: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 0;
-    background-color: #ffffff;
-    border-radius: 50%;
-    transition: background-color 0.3s, transform 0.5s;
-
-    &:hover {
-      background-color: #a3bac7;
-      transform: scale(1.1);
-
-      path {
-        transition: fill 0.3s;
-        fill: #f9fafb;
-      }
-    }
-
-    &:not(:last-child) {
-      margin-right: 15px;
+    &:focus {
+      color: #191919;
     }
   }
 }
 
 .footer {
-
-  max-width: 1170px;
-  margin: 0 auto;
   color: #909090;
+  padding-top: 75px;
+  width: 100%;
+  font-size: 14px;
+  @include rubik(400);
+  line-height: 2.2;
+  padding-top: 75px;
 
-  .footer-top {
-    padding-top: 75px;
-    width: 100%;
-    font-size: 14px;
-    @extend %rubikregular-400;
-    line-height: 2.2;
 
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 75px;
+  }
 
-    &__inner {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 75px;
+  .logo {
+    margin-bottom: 30px;
+  }
+
+  &__info {
+    max-width: 200px;
+  }
+
+  &__link {
+    transition: color 0.5s;
+    @include text-clamp(2);
+
+    &:hover {
+      color: $sofs;
     }
 
-    &__info {
-      max-width: 200px;
-    }
-
-
-    &__title {
-      text-transform: uppercase;
-      color: #1f2044;
-      font-size: 16px;
-      @extend %dmsansbold-700;
-    }
-
-    &__serunt {
-      margin-right: 105px;
-
-    }
-
-    &__letter {
-      max-width: 270px;
-    }
-
-    &__btn {
-      padding: 15px 50px;
-      width: 100px;
-      height: 38px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: transparent;
-    }
-
-    &__text {
-      margin-bottom: 35px;
-    }
-
-    &__form {
-      display: flex;
-
-      & input {
-        border: transparent;
-        background-color: #fef7f0;
-        padding: 0 0 0 15px;
-      }
-
-      & input::placeholder {
-        color: #234969;
-        font-size: 12px;
-      }
+    span {
+      color: #909090;
     }
   }
 
-  .footer-bottom {
+  &__address {
+    span {
+      text-transform: uppercase;
+    }
+  }
+
+
+  &__title {
+    text-transform: uppercase;
+    color: #1f2044;
+    font-size: 16px;
+    @include dmsans(700);
+    @include text-clamp(2);
+  }
+
+  &__serunt {
+    margin-right: 105px;
+    max-width: 120px;
+  }
+
+  &__letter {
+    max-width: 270px;
+  }
+
+
+  &__text {
+    margin-bottom: 35px;
+    @include text-clamp(4);
+  }
+
+
+  &__description {
     padding: 35px 0;
     border-top: 1px solid #dae4e9;
+  }
 
-    &__inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__desc {
+    @include text-clamp(1);
+    max-width: 800px;
+  }
+
+  &__items {
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+
+    &:not(:last-child)::after {
+      content: "|";
+      padding-left: 10px;
     }
 
-    &__menu {
-      display: flex;
-    }
-
-    &__item,
-    &__border {
-      &:not(:last-child) {
-        margin-right: 18px;
-      }
-
+    &:not(:last-child) {
+      margin-right: 10px;
     }
   }
 }
-
-@import 'media';
