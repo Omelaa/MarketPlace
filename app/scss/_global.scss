@@ -106,7 +106,6 @@ body {
     color: $sofs;
     line-height: 2.5;
     @include dmsans(500);
-    margin-bottom: auto;
 
     h3 {
       font-size: 16px;
@@ -128,6 +127,10 @@ body {
     display: flex;
     opacity: 0;
     transition: 0.5s;
+
+    li:not(:last-child) {
+      margin-right: 15px;
+    }
   }
 
   &__button,
@@ -150,10 +153,6 @@ body {
         transition: fill 0.3s;
         fill: #f9fafb;
       }
-    }
-
-    &:not(:last-child) {
-      margin-right: 15px;
     }
   }
 }

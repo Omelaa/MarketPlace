@@ -9,6 +9,6 @@ $(function(){
       arrows: false,
     });
 
-     var mixer = mixitup('.products__inner');
+     var mixer = mixitup('.product-card__inner');
 
 })
