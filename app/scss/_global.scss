@@ -21,9 +21,41 @@ body {
   &:active {
     background-color: #b3ccd9;
   }
+
+  &:hover::after {
+    animation: arrow-reverse 0.5s linear;
+  }
 }
 
+a:active,
+a:focus {
+  color: $default;
+}
 
+input:active,
+input:focus {
+  color: $default;
+}
+
+.button-arrow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+
+  &::after {
+    content: "";
+    background-image: url(../images/slider/arrow.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 22px;
+    height: 9px;
+    display: block;
+    position: absolute;
+    right: 20px;
+    bottom: 25px;
+  }
+}
 
 .title {
   @include dmsans(700);
@@ -69,6 +101,41 @@ body {
   }
 }
 
+.products-block {
+
+  &__title {
+    margin-bottom: 25px;
+  }
+
+  &__buttons {
+    margin-bottom: 70px;
+    display: flex;
+    justify-content: center;
+
+    & li:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  &__button {
+    border: 0;
+    background-color: inherit;
+    @include dmsans(700);
+    color: #8b8b8b;
+    transition: color 0.5s;
+    overflow: auto;
+    max-width: 100px;
+
+    &:hover {
+      color: #191919;
+    }
+
+    &:focus {
+      color: #191919;
+    }
+  }
+}
+
 .product-card {
   display: flex;
   flex-direction: column;
@@ -100,7 +167,6 @@ body {
     object-fit: cover;
     display: flex;
   }
-
 
   &__name {
     color: $sofs;
@@ -154,5 +220,68 @@ body {
         fill: #f9fafb;
       }
     }
+  }
+}
+
+.video-pulse {
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    border: 10px solid $button;
+    left: -13px;
+    right: -20px;
+    top: -13px;
+    border-radius: 50%;
+    opacity: 0;
+    animation: pulse 2s linear infinite;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes arrow {
+  0% {
+    transform: translateX(0);
+
+  }
+
+  50% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes arrow-reverse {
+  0% {
+    transform: translateX(0);
+
+  }
+
+  50% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(0);
   }
 }

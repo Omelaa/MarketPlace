@@ -17,6 +17,11 @@ $bg: #fcd7b6;
   font-weight: $weight;
 }
 
+@mixin Poppins($weight) {
+  font-family: 'Poppins', sans-serif;
+  font-weight: $weight;
+}
+
 @mixin text-clamp($lines: 2, $line-height: false) {
   overflow: hidden;
   display: -webkit-box;
@@ -26,4 +31,12 @@ $bg: #fcd7b6;
   @if $line-height {
     max-height: $line-height * $lines * 1px;
   }
+}
+
+@function max ($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+
+@function min ($numbers...) {
+  @return m#{i}n(#{$numbers});
 }
