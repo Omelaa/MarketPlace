@@ -8,38 +8,45 @@ body {
 
 .button {
   background-color: $button;
-  width: 200px;
-  height: 60px;
+  // width: 200px;
+  // height: 60px;
+  padding: 20px 95px;
   color: #ffffff;
   @include rubik(500);
   border: 0;
   transition: background-color 0.5s;
-  @include text-clamp(1);
 
-  &:hover,
+  a {
+    display: inline;
+  }
+
   &:focus,
+  &:hover,
   &:active {
     background-color: #b3ccd9;
   }
 
-  &:hover::after {
-    animation: arrow-reverse 0.5s linear;
+  &:hover {
+    &::after {
+      animation: arrow-reverse 0.5s linear;
+    }
   }
 }
 
-a:active,
-a:focus {
-  color: $default;
-}
+// a:focus,
+// a:active {
+//   color: $default;
+// }
 
-input:active,
-input:focus {
-  color: $default;
-}
+// input:focus,
+// input:hover,
+// input:active {
+//   color: $default;
+// }
 
-.button-arrow {
+.button--arrow {
   position: relative;
-  display: flex;
+
   align-items: center;
   padding-left: 30px;
 
@@ -52,7 +59,7 @@ input:focus {
     height: 9px;
     display: block;
     position: absolute;
-    right: 20px;
+    right: 18px;
     bottom: 25px;
   }
 }
@@ -91,7 +98,7 @@ input:focus {
   }
 
   &__btn {
-    padding: 15px 50px;
+    padding: 5px 20px;
     width: 100px;
     max-height: 38px;
     display: flex;
@@ -101,13 +108,13 @@ input:focus {
   }
 }
 
-.products-block {
+.block {
 
   &__title {
     margin-bottom: 25px;
   }
 
-  &__buttons {
+  &__list {
     margin-bottom: 70px;
     display: flex;
     justify-content: center;
@@ -126,31 +133,38 @@ input:focus {
     overflow: auto;
     max-width: 100px;
 
+
+    &:focus {
+      color: #191919;
+    }
+
     &:hover {
       color: #191919;
     }
 
-    &:focus {
+    &--active {
       color: #191919;
     }
   }
 }
 
-.product-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 270px;
-  min-height: 380px;
-  border-radius: 10px;
-  box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
-  text-align: center;
-  padding: 15px;
-  position: relative;
+.card {
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 270px;
+    min-height: 380px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    text-align: center;
+    padding: 15px;
+    position: relative;
 
-  &:hover {
-    .product-card__box {
-      opacity: 1;
+    &:hover {
+      .card__box {
+        opacity: 1;
+      }
     }
   }
 
@@ -159,6 +173,7 @@ input:focus {
     grid-template-columns: 270px 270px 270px 270px;
     grid-template-rows: repeat(380px);
     grid-gap: 30px;
+    margin-bottom: 80px;
 
   }
 
@@ -175,7 +190,7 @@ input:focus {
 
     h3 {
       font-size: 16px;
-      @include text-clamp(2);
+      @include text-clamp(1);
     }
   }
 
@@ -184,6 +199,7 @@ input:focus {
     color: $button;
     @include dmsans(700);
     @include text-clamp(1);
+    max-width: 150px;
   }
 
   &__box {
@@ -212,6 +228,14 @@ input:focus {
     transition: background-color 0.3s, transform 0.5s;
     box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.35);
 
+    &:focus {
+      background-color: #a3bac7;
+
+      path {
+        fill: #f9fafb;
+      }
+    }
+
     &:hover {
       background-color: #a3bac7;
 
@@ -220,6 +244,25 @@ input:focus {
         fill: #f9fafb;
       }
     }
+
+    &:active {
+      path {
+        fill: #f9fafb;
+      }
+
+      outline-color:$bg;
+    }
+  }
+}
+
+
+
+.lamp {
+
+  &__img {
+    max-width: 235px;
+    max-height: 410px;
+    transform: translateY(-90px);
   }
 }
 
