@@ -1,0 +1,65 @@
+.design {
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 370px);
+    grid-template-rows: repeat(auto-fill, 245px);
+    grid-column-gap: 30px;
+    grid-row-gap: 35px;
+    margin-bottom: 120px;
+  }
+
+  &__item {
+    padding: 30px 30px 30px 35px;
+    background-color: #f8f8f8;
+    width: 370px;
+    height: 245px;
+    position: relative;
+    @include dmsans(700);
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    line-height: 1.2;
+    color: $title;
+    max-width: 180px;
+    @include text-clamp(2);
+    transition: color 0.5s;
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: $default;
+    }
+  }
+
+  &__categori {
+    color: #a3bbc8;
+    display: block;
+    padding-top: 15px;
+    @include text-clamp(1);
+
+  }
+
+  &__img {
+    position: absolute;
+    right: 0px;
+    bottom: 40px;
+    max-height: 150px;
+    max-width: 280px;
+
+    &--rattan {
+      right: 55px;
+      bottom: 50px;
+      width: 115px;
+      height: 145px;
+    }
+
+    &--rocking {
+      right: 30px;
+      bottom: 60px;
+      width: 142px;
+      height: 178px;
+    }
+  }
+}

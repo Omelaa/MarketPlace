@@ -1,0 +1,104 @@
+.trendy {
+
+  &__items {
+    padding: 60px 0 40px;
+    background-color: $bg;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    margin: 0 40px 55px 0;
+  }
+
+  &__title {
+    font-size: 72px;
+    line-height: 0.9;
+    color: #243f4d;
+    display: block;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    max-width: 495px;
+    @include rubik(500);
+    @include text-clamp(2);
+  }
+
+  &__desc {
+    max-width: 370px;
+    margin-bottom: 40px;
+    font-size: 18px;
+    line-height: 1.6;
+    @include rubik(400);
+    @include text-clamp(4);
+  }
+
+  &__element {
+    background-image: url(../images/sofa-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 640px;
+    width: 100%;
+    height: 665px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    left: 100px;
+
+  }
+
+  &__img {
+    height: 264px;
+    max-width: 640px;
+    width: 100%;
+    position: absolute;
+    left: -100px;
+    top: 210px;
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+
+    li {
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      button {
+        border-radius: 50%;
+        width: 30px;
+        height: 29px;
+        padding: 0;
+        border: 0;
+        background-color: #fde3cc;
+        font-size: 11px;
+        line-height: 1.2;
+        @include rubik(500);
+        color: $sofs;
+        transition: background-color 0.5s;
+
+        &:focus {
+          outline-color: $default;
+        }
+
+        &:hover {
+          background-color: #ffffff;
+        }
+      }
+
+      &.slick-active {
+        button {
+          border-radius: 50%;
+          background-color: #ffffff;
+        }
+      }
+    }
+  }
+}

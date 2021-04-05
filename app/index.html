@@ -19,35 +19,35 @@
         <a class="logo header__logo" href="#">
           <img class="logo__img" src="images/logo.png" alt="logo">
         </a>
-        <nav class="header__menu">
-          <ul class="header__list">
-            <li class="header__item">
-              <a href="#" class="header__link">
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="#" class="menu__link">
                 Home +
               </a>
             </li>
-            <li class="header__item">
-              <a href="#" class="header__link">
+            <li class="menu__item">
+              <a href="#" class="menu__link">
                 About
               </a>
             </li>
-            <li class="header__item">
-              <a href="#" class="header__link">
+            <li class="menu__item">
+              <a href="#" class="menu__link">
                 Services
               </a>
             </li>
-            <li class="header__item">
-              <a href="#" class="header__link">
+            <li class="menu__item">
+              <a href="#" class="menu__link">
                 Pages +
               </a>
             </li>
-            <li class="header__item">
-              <a href="#" class="header__link">
+            <li class="menu__item">
+              <a href="#" class="menu__link">
                 Pages
               </a>
             </li>
-            <li class="header__item">
-              <a href="#" class="header__link">
+            <li class="menu__item">
+              <a href="#" class="menu__link">
                 Contact
               </a>
             </li>
@@ -221,80 +221,46 @@
     <section class="products">
       <h2 class="sr-only">we need a products!</h2>
       <div class="container container--sm">
-        <div class="block">
+        <div class="block" data-ref="container-1" id="MixItUpD9E6CA">
           <h3 class="title block__title">
             Products of the week
           </h3>
-          <ul class="block__list">
-            <li>
-              <button class="block__button block__button--active" data-filter="all" type="button">
-                All
-              </button>
-            </li>
-            <li>
-              <button class="block__button" data-filter=".categori-furnitures" type="button">
-                Furnitures
-              </button>
-            </li>
-            <li>
-              <button class="block__button" data-filter=".categori-chairs" type="button">
-                Chairs
-              </button>
-            </li>
-            <li>
-              <button class="block__button" data-filter=".categori-lighting" type="button">
-                Lighting
-              </button>
-            </li>
-            <li>
-              <button class="block__button" data-filter=".decor" type="button">
-                Decor
-              </button>
-            </li>
-          </ul>
-        </div>
-        <div class="card">
-          <div class="card__inner" id="container-1">
-            <article class="card__item mix decor" data-my-order="1">
-              <img class="card__img" src="images/products/1.png" alt="">
-              <div class="card__name">
-                <h3>Wooden radio</h3>
-              </div>
-              <span class="card__price">$29.00</span>
-              <ul class="card__box">
-                <li>
-                  <a class="card__link" href="#">
-                    <svg width="20px" height="20px">
-                      <path fill-rule="evenodd" fill="rgb(163, 187, 200)"
-                        d="M19.450,19.448 C18.719,20.181 17.531,20.181 16.799,19.448 L12.211,14.860 C13.274,14.178 14.178,13.272 14.862,12.209 L19.450,16.798 C20.183,17.530 20.183,18.718 19.450,19.448 ZM7.500,14.999 C3.358,14.999 -0.000,11.640 -0.000,7.499 C-0.000,3.357 3.358,-0.002 7.500,-0.002 C11.642,-0.002 15.000,3.357 15.000,7.499 C15.000,11.640 11.642,14.999 7.500,14.999 ZM7.500,1.873 C4.398,1.873 1.875,4.397 1.875,7.499 C1.875,10.601 4.398,13.123 7.500,13.123 C10.602,13.123 13.125,10.601 13.125,7.499 C13.125,4.397 10.602,1.873 7.500,1.873 ZM4.375,7.499 L3.125,7.499 C3.125,5.087 5.088,3.123 7.500,3.123 L7.500,4.374 C5.777,4.374 4.375,5.776 4.375,7.499 Z" />
-                    </svg>
-                    <div class="sr-only">click to open search</div>
-                  </a>
-                </li>
-                <li>
-                  <button class="card__button" type="button">
-                    <svg width="22px" height="20px">
-                      <path fill-rule="evenodd" fill="rgb(163, 187, 200)"
-                        d="M21.934,5.216 L18.217,13.776 C18.082,14.075 17.797,14.264 17.471,14.264 L7.257,14.264 C6.891,14.264 6.565,14.020 6.470,13.667 L3.147,1.629 L0.814,1.629 C0.366,1.629 -0.000,1.262 -0.000,0.814 C-0.000,0.365 0.366,-0.002 0.814,-0.002 L3.757,-0.002 C4.124,-0.002 4.449,0.243 4.544,0.596 L7.867,12.634 L16.929,12.634 L19.940,5.705 L9.902,5.705 C9.454,5.705 9.088,5.338 9.088,4.889 C9.088,4.440 9.454,4.074 9.902,4.074 L21.188,4.074 C21.459,4.074 21.717,4.211 21.866,4.440 C22.015,4.673 22.043,4.957 21.934,5.216 ZM6.484,16.303 C7.501,16.303 8.329,17.131 8.329,18.150 C8.329,19.169 7.501,19.999 6.484,19.999 C5.466,19.999 4.639,19.169 4.639,18.150 C4.639,17.131 5.466,16.303 6.484,16.303 ZM17.892,16.303 C18.909,16.235 19.791,17.009 19.859,18.015 C19.886,18.517 19.737,18.994 19.411,19.360 C19.085,19.740 18.638,19.958 18.149,19.999 C18.109,19.999 18.055,19.999 18.014,19.999 C17.051,19.999 16.250,19.238 16.183,18.273 C16.115,17.267 16.874,16.371 17.892,16.303 Z" />
-                    </svg>
-                    <span class="sr-only">click to open the one you like</span>
-                  </button>
-                </li>
-                <li>
-                  <button class="card__button" type="button">
-                    <svg width="22px" height="18px">
-                      <path fill-rule="evenodd" fill="rgb(163, 187, 200)"
-                        d="M21.990,5.820 C21.907,4.269 21.250,2.813 20.141,1.720 C19.016,0.610 17.545,-0.001 16.002,-0.001 C13.691,-0.001 12.054,1.784 11.175,2.744 C11.125,2.798 11.071,2.857 11.019,2.913 C10.991,2.882 10.963,2.849 10.936,2.819 C10.132,1.903 8.460,-0.001 5.998,-0.001 C4.455,-0.001 2.985,0.610 1.859,1.720 C0.750,2.813 0.093,4.269 0.010,5.820 C-0.072,7.361 0.320,8.700 1.281,10.158 C2.142,11.466 4.385,13.532 6.044,14.906 C7.749,16.317 9.994,17.999 11.009,17.999 C12.041,17.999 14.278,16.319 15.974,14.912 C17.620,13.545 19.850,11.480 20.720,10.158 C21.366,9.174 22.095,7.792 21.990,5.820 ZM19.614,9.430 C18.982,10.391 17.202,12.166 15.183,13.848 C12.777,15.852 11.352,16.643 11.011,16.674 C10.669,16.639 9.241,15.841 6.823,13.831 C4.793,12.145 3.010,10.377 2.386,9.429 C1.591,8.223 1.266,7.132 1.332,5.891 C1.467,3.372 3.560,1.322 5.998,1.322 C7.861,1.322 9.214,2.864 9.941,3.692 C10.369,4.180 10.604,4.447 11.000,4.447 C11.409,4.447 11.672,4.161 12.151,3.638 C12.945,2.772 14.273,1.322 16.002,1.322 C18.440,1.322 20.533,3.372 20.668,5.891 C20.735,7.145 20.420,8.204 19.614,9.430 Z" />
-                    </svg>
-                    <span class="sr-only">click to open shoping cart</span>
-                  </button>
-                </li>
-              </ul>
-            </article>
-            <article class="card__item mix decor" data-my-order="2">
-              <img class="card__img" src="images/products/2.png" alt="">
-              <div class="card__name">
-                <h3>Wooden chair</h3>
+          <div class="block__wrapper">
+            <ul class="block__list">
+              <li>
+                <button class="block__button block__button--active" data-filter="all" type="button">
+                  All
+                </button>
+              </li>
+              <li>
+                <button class="block__button" data-filter=".categori-furnitures" type="button">
+                  Furnitures
+                </button>
+              </li>
+              <li>
+                <button class="block__button" data-filter=".categori-chairs" type="button">
+                  Chairs
+                </button>
+              </li>
+              <li>
+                <button class="block__button" data-filter=".categori-lighting" type="button">
+                  Lighting
+                </button>
+              </li>
+              <li>
+                <button class="block__button" data-filter=".categori-decor" type="button">
+                  Decor
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="card__inner">
+              <article class="card__item mix categori-decor">
+                <img class="card__img" src="images/products/1.png" alt="">
+                <h3 class="card__name">
+                  Wooden radio
+                </h3>
                 <span class="card__price">$29.00</span>
                 <ul class="card__box">
                   <li>
@@ -325,12 +291,12 @@
                     </button>
                   </li>
                 </ul>
-              </div>
-            </article>
-            <article class="card__item mix decor" data-my-order="3">
-              <img class="card__img" src="images/products/3.png" alt="">
-              <div class="card__name">
-                <h3>White radio</h3>
+              </article>
+              <article class="card__item mix categori-decor">
+                <img class="card__img" src="images/products/2.png" alt="">
+                <h3 class="card__name">
+                  Wooden chair
+                </h3>
                 <span class="card__price">$29.00</span>
                 <ul class="card__box">
                   <li>
@@ -361,12 +327,12 @@
                     </button>
                   </li>
                 </ul>
-              </div>
-            </article>
-            <article class="card__item mix categori-furnitures" data-my-order="4">
-              <img class="card__img" src="images/products/4.png" alt="">
-              <div class="card__name">
-                <h3>Retro table</h3>
+              </article>
+              <article class="card__item mix categori-decor">
+                <img class="card__img" src="images/products/3.png" alt="">
+                <h3 class="card__name">
+                  White chair
+                </h3>
                 <span class="card__price">$29.00</span>
                 <ul class="card__box">
                   <li>
@@ -397,12 +363,12 @@
                     </button>
                   </li>
                 </ul>
-              </div>
-            </article>
-            <article class="card__item mix categori-lighting " data-my-order="5">
-              <img class="card__img" src="images/products/5.png" alt="">
-              <div class="card__name">
-                <h3>Wooden radio</h3>
+              </article>
+              <article class="card__item mix categori-furnitures">
+                <img class="card__img" src="images/products/4.png" alt="">
+                <h3 class="card__name">
+                  Retro table
+                </h3>
                 <span class="card__price">$29.00</span>
                 <ul class="card__box">
                   <li>
@@ -433,12 +399,13 @@
                     </button>
                   </li>
                 </ul>
-              </div>
-            </article>
-            <article class="card__item mix categori-lighting" data-my-order="6">
-              <img class="card__img" src="images/products/6.png" alt="">
-              <div class="card__name">
-                <h3>Wooden chair</h3>
+
+              </article>
+              <article class="card__item mix categori-lighting ">
+                <img class="card__img" src="images/products/5.png" alt="">
+                <h3 class="card__name">
+                  Wooden radio
+                </h3>
                 <span class="card__price">$29.00</span>
                 <ul class="card__box">
                   <li>
@@ -469,12 +436,12 @@
                     </button>
                   </li>
                 </ul>
-              </div>
-            </article>
-            <article class="card__item mix categori-decor" data-my-order="7">
-              <img class="card__img" src="images/products/7.png" alt="">
-              <div class="card__name">
-                <h3>White radio</h3>
+              </article>
+              <article class="card__item mix categori-lighting">
+                <img class="card__img" src="images/products/6.png" alt="">
+                <h3 class="card__name">
+                  Wooden chair
+                </h3>
                 <span class="card__price">$29.00</span>
                 <ul class="card__box">
                   <li>
@@ -505,12 +472,12 @@
                     </button>
                   </li>
                 </ul>
-              </div>
-            </article>
-            <article class="card__item mix categori-decor" data-my-order="8">
-              <img class="card__img" src="images/products/8.png" alt="">
-              <div class="card__name">
-                <h3>Retro table</h3>
+              </article>
+              <article class="card__item mix categori-decor">
+                <img class="card__img" src="images/products/7.png" alt="">
+                <h3 class="card__name">
+                  White chair
+                </h3>
                 <span class="card__price">$29.00</span>
                 <ul class="card__box">
                   <li>
@@ -541,8 +508,44 @@
                     </button>
                   </li>
                 </ul>
-              </div>
-            </article>
+              </article>
+              <article class="card__item mix categori-decor">
+                <img class="card__img" src="images/products/8.png" alt="">
+                <h3 class="card__name">
+                  Retro table
+                </h3>
+                <span class="card__price">$29.00</span>
+                <ul class="card__box">
+                  <li>
+                    <a class="card__link" href="#">
+                      <svg width="20px" height="20px">
+                        <path fill-rule="evenodd" fill="rgb(163, 187, 200)"
+                          d="M19.450,19.448 C18.719,20.181 17.531,20.181 16.799,19.448 L12.211,14.860 C13.274,14.178 14.178,13.272 14.862,12.209 L19.450,16.798 C20.183,17.530 20.183,18.718 19.450,19.448 ZM7.500,14.999 C3.358,14.999 -0.000,11.640 -0.000,7.499 C-0.000,3.357 3.358,-0.002 7.500,-0.002 C11.642,-0.002 15.000,3.357 15.000,7.499 C15.000,11.640 11.642,14.999 7.500,14.999 ZM7.500,1.873 C4.398,1.873 1.875,4.397 1.875,7.499 C1.875,10.601 4.398,13.123 7.500,13.123 C10.602,13.123 13.125,10.601 13.125,7.499 C13.125,4.397 10.602,1.873 7.500,1.873 ZM4.375,7.499 L3.125,7.499 C3.125,5.087 5.088,3.123 7.500,3.123 L7.500,4.374 C5.777,4.374 4.375,5.776 4.375,7.499 Z" />
+                      </svg>
+                      <div class="sr-only">click to open search</div>
+                    </a>
+                  </li>
+                  <li>
+                    <button class="card__button" type="button">
+                      <svg width="22px" height="20px">
+                        <path fill-rule="evenodd" fill="rgb(163, 187, 200)"
+                          d="M21.934,5.216 L18.217,13.776 C18.082,14.075 17.797,14.264 17.471,14.264 L7.257,14.264 C6.891,14.264 6.565,14.020 6.470,13.667 L3.147,1.629 L0.814,1.629 C0.366,1.629 -0.000,1.262 -0.000,0.814 C-0.000,0.365 0.366,-0.002 0.814,-0.002 L3.757,-0.002 C4.124,-0.002 4.449,0.243 4.544,0.596 L7.867,12.634 L16.929,12.634 L19.940,5.705 L9.902,5.705 C9.454,5.705 9.088,5.338 9.088,4.889 C9.088,4.440 9.454,4.074 9.902,4.074 L21.188,4.074 C21.459,4.074 21.717,4.211 21.866,4.440 C22.015,4.673 22.043,4.957 21.934,5.216 ZM6.484,16.303 C7.501,16.303 8.329,17.131 8.329,18.150 C8.329,19.169 7.501,19.999 6.484,19.999 C5.466,19.999 4.639,19.169 4.639,18.150 C4.639,17.131 5.466,16.303 6.484,16.303 ZM17.892,16.303 C18.909,16.235 19.791,17.009 19.859,18.015 C19.886,18.517 19.737,18.994 19.411,19.360 C19.085,19.740 18.638,19.958 18.149,19.999 C18.109,19.999 18.055,19.999 18.014,19.999 C17.051,19.999 16.250,19.238 16.183,18.273 C16.115,17.267 16.874,16.371 17.892,16.303 Z" />
+                      </svg>
+                      <span class="sr-only">click to open the one you like</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="card__button" type="button">
+                      <svg width="22px" height="18px">
+                        <path fill-rule="evenodd" fill="rgb(163, 187, 200)"
+                          d="M21.990,5.820 C21.907,4.269 21.250,2.813 20.141,1.720 C19.016,0.610 17.545,-0.001 16.002,-0.001 C13.691,-0.001 12.054,1.784 11.175,2.744 C11.125,2.798 11.071,2.857 11.019,2.913 C10.991,2.882 10.963,2.849 10.936,2.819 C10.132,1.903 8.460,-0.001 5.998,-0.001 C4.455,-0.001 2.985,0.610 1.859,1.720 C0.750,2.813 0.093,4.269 0.010,5.820 C-0.072,7.361 0.320,8.700 1.281,10.158 C2.142,11.466 4.385,13.532 6.044,14.906 C7.749,16.317 9.994,17.999 11.009,17.999 C12.041,17.999 14.278,16.319 15.974,14.912 C17.620,13.545 19.850,11.480 20.720,10.158 C21.366,9.174 22.095,7.792 21.990,5.820 ZM19.614,9.430 C18.982,10.391 17.202,12.166 15.183,13.848 C12.777,15.852 11.352,16.643 11.011,16.674 C10.669,16.639 9.241,15.841 6.823,13.831 C4.793,12.145 3.010,10.377 2.386,9.429 C1.591,8.223 1.266,7.132 1.332,5.891 C1.467,3.372 3.560,1.322 5.998,1.322 C7.861,1.322 9.214,2.864 9.941,3.692 C10.369,4.180 10.604,4.447 11.000,4.447 C11.409,4.447 11.672,4.161 12.151,3.638 C12.945,2.772 14.273,1.322 16.002,1.322 C18.440,1.322 20.533,3.372 20.668,5.891 C20.735,7.145 20.420,8.204 19.614,9.430 Z" />
+                      </svg>
+                      <span class="sr-only">click to open shoping cart</span>
+                    </button>
+                  </li>
+                </ul>
+              </article>
+            </div>
           </div>
         </div>
       </div>
@@ -600,101 +603,104 @@
           <h3 class="title block__title">
             New Design
           </h3>
-          <ul class="block__list">
-            <li>
-              <button class="block__button block__button--active" data-filter="all" type="button">
-                All
-              </button>
-            </li>
-            <li>
-              <button class="block__button" data-filter=".categori-furnitures" type="button">
-                Furnitures
-              </button>
-            </li>
-            <li>
-              <button class="block__button" data-filter=".categori-chairs" type="button">
-                Chairs
-              </button>
-            </li>
-            <li>
-              <button class="block__button" data-filter=".categori-lighting" type="button">
-                Lighting
-              </button>
-            </li>
-            <li>
-              <button class="block__button" data-filter=".decor" type="button">
-                Decor
-              </button>
-            </li>
-          </ul>
+          <div class="block__wrapper" data-ref="container-2" id="MixItUp623DFE">
+            <ul class="block__list">
+              <li>
+                <button class="block__button block__button--active" data-filter="all" type="button">
+                  All
+                </button>
+              </li>
+              <li>
+                <button class="block__button" data-filter=".categori-furnitures" type="button">
+                  Furnitures
+                </button>
+              </li>
+              <li>
+                <button class="block__button" data-filter=".categori-chairs" type="button">
+                  Chairs
+                </button>
+              </li>
+              <li>
+                <button class="block__button" data-filter=".categori-lighting" type="button">
+                  Lighting
+                </button>
+              </li>
+              <li>
+                <button class="block__button" data-filter=".categori-decor" type="button">
+                  Decor
+                </button>
+              </li>
+            </ul>
+
+            <ul class="design__inner">
+              <li class="design__item mix categori-chairs">
+                <a class="design__subtitle" href="#">
+                  Beat Flat Pendant
+                  Black
+                </a>
+                <span class="design__categori">Classic</span>
+                <div class="design__img">
+                  <img src="images/design/1.png" alt="sofa">
+                </div>
+              </li>
+              <li class="design__item categori-decor">
+                <a class="design__subtitle" href="#">
+                  Lampe Sur Pieds
+                  Bamboo
+                </a>
+                <span class="design__categori">Classic</span>
+                <div class="design__img">
+                  <img src="images/design/2.png" alt="sofa">
+                </div>
+              </li>
+              <li class="design__item mix categori-decor">
+                <a class="design__subtitle" href="#">
+                  Rattan Rocking
+                  Chair
+                </a>
+                <span class="design__categori">Classic</span>
+                <div class="design__img design__img--rattan">
+                  <img src="images/design/3.png" alt="sofa">
+                </div>
+              </li>
+              <li class="design__item mix categori-decor">
+                <a class="design__subtitle" href="#">
+                  Rattan Rocking
+                  Chair
+                </a>
+                <span class="design__categori">Classic</span>
+                <div class="design__img">
+                  <img src="images/design/4.png" alt="sofa">
+                </div>
+              </li>
+              <li class="design__item mix categori-chairs">
+                <a class="design__subtitle" href="#">
+                  Rattan Rocking
+                  Chair
+                </a>
+                <span class="design__categori">Classic</span>
+                <div class="design__img design__img--rocking">
+                  <img src="images/design/5.png" alt="sofa">
+                </div>
+              </li>
+              <li class="design__item categori-furnitures">
+                <a class="design__subtitle" href="#">
+                  Lampe Sur Pieds
+                  Bamboo
+                </a>
+                <span class="design__categori">Classic</span>
+                <div class="design__img">
+                  <img src="images/design/6.png" alt="sofa">
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
-        <ul class="design__inner" id="сontainer-2">
-          <li class="design__item mix categori-chairs-1">
-            <a class="design__subtitle" href="#">
-              Beat Flat Pendant
-              Black
-            </a>
-            <span class="design__categori">Classic</span>
-            <div class="design__img">
-              <img src="images/design/1.png" alt="sofa">
-            </div>
-          </li>
-          <li class="design__item categori-decor-1">
-            <a class="design__subtitle" href="#">
-              Lampe Sur Pieds
-              Bamboo
-            </a>
-            <span class="design__categori">Classic</span>
-            <div class="design__img">
-              <img src="images/design/2.png" alt="sofa">
-            </div>
-          </li>
-          <li class="design__item mix categori-decor-1">
-            <a class="design__subtitle" href="#">
-              Rattan Rocking
-              Chair
-            </a>
-            <span class="design__categori">Classic</span>
-            <div class="design__img design__img--rattan">
-              <img src="images/design/3.png" alt="sofa">
-            </div>
-          </li>
-          <li class="design__item mix categori-decor-1">
-            <a class="design__subtitle" href="#">
-              Rattan Rocking
-              Chair
-            </a>
-            <span class="design__categori">Classic</span>
-            <div class="design__img">
-              <img src="images/design/4.png" alt="sofa">
-            </div>
-          </li>
-          <li class="design__item mix categori-chairs-1">
-            <a class="design__subtitle" href="#">
-              Rattan Rocking
-              Chair
-            </a>
-            <span class="design__categori">Classic</span>
-            <div class="design__img design__img--rocking">
-              <img src="images/design/5.png" alt="sofa">
-            </div>
-          </li>
-          <li class="design__item categori-furnitures-1">
-            <a class="design__subtitle" href="#">
-              Lampe Sur Pieds
-              Bamboo
-            </a>
-            <span class="design__categori">Classic</span>
-            <div class="design__img">
-              <img src="images/design/6.png" alt="sofa">
-            </div>
-          </li>
-        </ul>
       </div>
       <div class="video" style="background-image: url(images/video-bg.jpg);">
         <div class="video__inner">
           <a class="video__link" href="https://www.youtube.com/watch?v=ekNqR_2iRVM" data-fancybox>
-            <div class="video-pulse video__play">
+            <div class="video__play">
               <svg width=" 22px" height="25px">
                 <path fill-rule="evenodd" fill="rgb(255, 255, 255)"
                   d="M20.684,14.740 L4.640,24.536 C4.139,24.842 3.559,24.997 2.977,24.997 C2.498,24.997 2.017,24.891 1.578,24.680 C0.606,24.210 -0.001,23.293 -0.001,22.295 L-0.001,2.700 C-0.001,1.701 0.606,0.783 1.578,0.314 C2.549,-0.155 3.727,-0.100 4.640,0.457 L20.684,10.255 C21.506,10.757 21.999,11.598 21.999,12.496 C21.999,13.396 21.506,14.237 20.684,14.740 Z" />
@@ -734,9 +740,9 @@
               <time class="insights__date" pubdate="2020-02-28">
                  28 january, 2020
               </time>
-              <div class="insights__by">
+              <a class="insights__by" href="#">
                  by admin
-              </div>
+              </a>
             </div>
           </li>
           <li class="insights__item">
@@ -755,9 +761,9 @@
               <time class="insights__date" pubdate="2020-02-28">
                  28 january, 2020
               </time>
-              <div class="insights__by">
+              <a class="insights__by" href="#">
                  by admin
-              </div>
+              </a>
             </div>
           </li>
           <li class="insights__item">
@@ -776,9 +782,9 @@
               <time class="insights__date" pubdate="2020-02-28">
                  28 january, 2020
               </time>
-              <div class="insights__by">
+              <a class="insights__by" href="#">
                  by admin
-              </div>
+              </a>
             </div>
           </li>
         </ul>
@@ -848,7 +854,7 @@
       <ul class="footer__inner">
         <li class="footer__info">
           <a class="logo foorter__logo" href="#">
-            <img class="logo" src="images/logo.png" alt="logotype">
+            <img class="logo__img" src="images/logo.png" alt="logotype">
           </a>
           <address class="footer__address">
             <a class="footer__link" target="_blank" href="https://goo.gl/maps/LnSR9R2pTsgEjj1d9">
@@ -931,10 +937,10 @@
               update protidin.
             </p>
           </div>
-          <form class="form" action="#">
+          <form class="footer-form" action="#">
             <label class="sr-only" for="email">You email</label>
             <input type="email" placeholder="Email address" name="email" id="email" required>
-            <button class="button form__btn" type="submit">
+            <button class="button footer-form__btn" type="submit">
               Subscribe
             </button>
           </form>
@@ -945,25 +951,25 @@
           <div class="footer__desc">
             ©2020 CopyRight Example. All rights reserved.
           </div>
-          <nav class="footer__menu">
-            <ul class="footer__items">
-              <li class="footer__item">
-                <a class="footer__link" href="#">
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="#" class="menu__link">
                   Home
                 </a>
               </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">
+              <li class="menu__item">
+                <a href="#" class="menu__link">
                   About
                 </a>
               </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">
-                  trendy
+              <li class="menu__item">
+                <a href="#" class="menu__link">
+                  Blog
                 </a>
               </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">
+              <li class="menu__item">
+                <a href="#" class="menu__link">
                   Contact
                 </a>
               </li>

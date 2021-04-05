@@ -21,20 +21,16 @@ $(function(){
       focusOnSelect: true,
     });
 
-    
-    $('#container-1').mixItUp({
-      selectors: {
-        filter: '.filter'
-      }
-    });
-    
-    
-    $('#сontainer-2').mixItUp({
-      selectors: {
-        filter: '.filter2'
-      }
-    });
-    
-    var mixer = mixitup('#container-1');
-    var mixer = mixitup('#сontainer-2');
+      var containerEl1 = document.querySelector('[data-ref="container-1"]');
+      var containerEl2 = document.querySelector('[data-ref="container-2"]');
+
+      var config = {
+           controls: {
+              scope: 'local'
+                }
+            };
+
+      var mixer1 = mixitup(containerEl1, config);
+      var mixer1 = mixitup(containerEl2, config);
+        
 });

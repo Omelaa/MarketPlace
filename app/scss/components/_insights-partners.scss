@@ -1,0 +1,195 @@
+.insights {
+  padding: 110px 0 0;
+  color: #262626;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    text-align: start;
+    max-width: 700px;
+  }
+
+  &__link {
+    @include dmsans(700);
+    display: flex;
+    margin-right: 30px;
+    position: relative;
+    max-width: 100px;
+    transition: color 0.5s;
+
+
+    &::after {
+      content: "";
+      background-image: url(../images/insights/arrow.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 7px;
+      height: 12px;
+      display: block;
+      position: absolute;
+      right: -30px;
+      top: 8px;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: $default;
+
+      &::after {
+        animation: arrow 0.5s linear;
+      }
+    }
+
+    span {
+      text-transform: uppercase;
+      @include text-clamp(1);
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    max-width: 370px;
+    background-color: #ffffff;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    transition: 0.5s;
+    z-index: 10;
+  }
+
+  &__img {
+
+    img {
+      max-width: 370px;
+      width: 100%;
+      max-height: 250px;
+      margin-bottom: 35px;
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+      transition: opacity 0.5s;
+    }
+
+    img:focus,
+    img:hover,
+    img:active {
+      opacity: 0.9;
+      outline-color: $default;
+    }
+  }
+
+  &__news {
+    background-color: rgb(163, 187, 200);
+    width: 103px;
+    height: 30px;
+    text-transform: uppercase;
+    border-radius: 25px;
+    color: #ffffff;
+    @include Poppins(700);
+    position: absolute;
+    top: 235px;
+    left: 28px;
+    @include text-clamp(1);
+    text-align: center;
+    padding: 2px 10px;
+    transition: background-color 0.5s;
+
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: #b3ccd9;
+      outline-color: $default;
+    }
+  }
+
+  &__text {
+    padding: 0 25px;
+    font-size: 18px;
+    line-height: 1.2;
+    max-width: 345px;
+    transition: color 0.5s;
+    margin-bottom: 70px;
+    @include dmsans (500);
+    @include text-clamp(3);
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: $default;
+      outline-color: $default;
+    }
+  }
+
+  &__description {
+    display: flex;
+    padding: 10px 25px 15px;
+    border-top: 1px solid #e0e0e0;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 2.5;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: #222933;
+    @include rubik(400);
+  }
+
+  &__date {
+    margin-right: 35px;
+  }
+
+  &__date,
+  &__by {
+    @include text-clamp(1);
+    max-width: 130px;
+  }
+
+  &__by {
+    transition: color 0.5s;
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: $default;
+      outline-color: $default;
+    }
+  }
+}
+
+.partners {
+  padding: 270px 0 0;
+  background-color: #fef7f0;
+  z-index: -1;
+  display: flex;
+  align-items: flex-end;
+  margin-top: -170px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 75px;
+  }
+
+  &__item {
+    img {
+      max-width: 300px;
+      max-height: 100px;
+    }
+  }
+
+  .slick-track {
+    display: flex;
+    align-items: center;
+  }
+}

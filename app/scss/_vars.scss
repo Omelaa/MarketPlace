@@ -8,6 +8,12 @@ $blue:#b3ccd9;
 
 
 
+@mixin r($width) {
+  @media only screen and (max-width: $width + "px") {
+    @content;
+  }
+}
+
 @mixin dmsans($weight) {
   font-family: 'DMSans', sans-serif;
   font-weight: $weight;

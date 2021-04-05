@@ -8,17 +8,12 @@ body {
 
 .button {
   background-color: $button;
-  // width: 200px;
-  // height: 60px;
   padding: 20px 95px;
   color: #ffffff;
   @include rubik(500);
   border: 0;
   transition: background-color 0.5s;
 
-  a {
-    display: inline;
-  }
 
   &:focus,
   &:hover,
@@ -31,18 +26,11 @@ body {
       animation: arrow-reverse 0.5s linear;
     }
   }
+
+  a {
+    display: inline;
+  }
 }
-
-// a:focus,
-// a:active {
-//   color: $default;
-// }
-
-// input:focus,
-// input:hover,
-// input:active {
-//   color: $default;
-// }
 
 .button--arrow {
   position: relative;
@@ -83,8 +71,62 @@ body {
   }
 }
 
-.form {
+.logo {
+  &__img {
+    margin-bottom: 15px;
+    max-width: 150px;
+    max-height: 50px;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    @include rubik(500);
+
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
+  }
+
+  &__link {
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+    @include text-clamp(1);
+    max-width: 100px;
+
+    &:focus {
+      border-bottom: 1px solid $bg;
+      color: $button;
+    }
+
+    &:hover {
+      border-bottom: 1px solid $button;
+    }
+
+    &:active {
+      color: $button;
+      border-color: $button;
+    }
+  }
+}
+
+.footer-form {
   display: flex;
+
+
+  &__btn {
+    padding: 5px 20px;
+    width: 100px;
+    max-height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: transparent;
+  }
 
   input {
     border: transparent;
@@ -96,166 +138,7 @@ body {
     color: #234969;
     font-size: 12px;
   }
-
-  &__btn {
-    padding: 5px 20px;
-    width: 100px;
-    max-height: 38px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: transparent;
-  }
 }
-
-.block {
-
-  &__title {
-    margin-bottom: 25px;
-  }
-
-  &__list {
-    margin-bottom: 70px;
-    display: flex;
-    justify-content: center;
-
-    & li:not(:last-child) {
-      margin-right: 15px;
-    }
-  }
-
-  &__button {
-    border: 0;
-    background-color: inherit;
-    @include dmsans(700);
-    color: #8b8b8b;
-    transition: color 0.5s;
-    overflow: auto;
-    max-width: 100px;
-
-
-    &:focus {
-      color: #191919;
-    }
-
-    &:hover {
-      color: #191919;
-    }
-
-    &--active {
-      color: #191919;
-    }
-  }
-}
-
-.card {
-  &__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 270px;
-    min-height: 380px;
-    border-radius: 10px;
-    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
-    text-align: center;
-    padding: 15px;
-    position: relative;
-
-    &:hover {
-      .card__box {
-        opacity: 1;
-      }
-    }
-  }
-
-  &__inner {
-    display: grid;
-    grid-template-columns: 270px 270px 270px 270px;
-    grid-template-rows: repeat(380px);
-    grid-gap: 30px;
-    margin-bottom: 80px;
-
-  }
-
-  &__img {
-    margin: auto 0;
-    object-fit: cover;
-    display: flex;
-  }
-
-  &__name {
-    color: $sofs;
-    line-height: 2.5;
-    @include dmsans(500);
-
-    h3 {
-      font-size: 16px;
-      @include text-clamp(1);
-    }
-  }
-
-  &__price {
-    display: block;
-    color: $button;
-    @include dmsans(700);
-    @include text-clamp(1);
-    max-width: 150px;
-  }
-
-  &__box {
-    position: absolute;
-    bottom: 150px;
-    right: 50px;
-    display: flex;
-    opacity: 0;
-    transition: 0.5s;
-
-    li:not(:last-child) {
-      margin-right: 15px;
-    }
-  }
-
-  &__button,
-  &__link {
-    width: 45px;
-    height: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 0;
-    background-color: #ffffff;
-    border-radius: 50%;
-    transition: background-color 0.3s, transform 0.5s;
-    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.35);
-
-    &:focus {
-      background-color: #a3bac7;
-
-      path {
-        fill: #f9fafb;
-      }
-    }
-
-    &:hover {
-      background-color: #a3bac7;
-
-      path {
-        transition: fill 0.3s;
-        fill: #f9fafb;
-      }
-    }
-
-    &:active {
-      path {
-        fill: #f9fafb;
-      }
-
-      outline-color:$bg;
-    }
-  }
-}
-
-
 
 .lamp {
 
@@ -263,22 +146,6 @@ body {
     max-width: 235px;
     max-height: 410px;
     transform: translateY(-90px);
-  }
-}
-
-.video-pulse {
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    border: 10px solid $button;
-    left: -13px;
-    right: -20px;
-    top: -13px;
-    border-radius: 50%;
-    opacity: 0;
-    animation: pulse 2s linear infinite;
   }
 }
 

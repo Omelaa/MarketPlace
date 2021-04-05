@@ -1,0 +1,78 @@
+.video {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &__link {
+    padding: 200px 900px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__play {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: $button;
+    position: relative;
+    transition: background-color 0.5s, transform 0.5s;
+
+    &::before,
+    &::after {
+      content: "";
+      width: 127px;
+      height: 127px;
+      background-color: rgb(163, 187, 200);
+      opacity: 0.4;
+      animation: pulse 1.5s infinite;
+      z-index: -1;
+    }
+
+    &:hover {
+      background-color: #ffffff;
+      transform: scale(1.05);
+
+      path {
+        fill: rgb(163, 187, 200);
+      }
+
+      &::before,
+      &::after {
+        background-color: #ffffff;
+        border-color: #ffffff;
+      }
+    }
+
+    svg {
+      position: absolute;
+      left: 41px;
+      top: 38px;
+    }
+
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      border: 10px solid $button;
+      left: -13px;
+      right: -20px;
+      top: -13px;
+      border-radius: 50%;
+      opacity: 0;
+      animation: pulse 1.5s linear infinite;
+    }
+  }
+}
