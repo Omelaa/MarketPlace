@@ -32,7 +32,7 @@ body {
   &:focus,
   &:hover,
   &:active {
-    background-color: #b3ccd9;
+    background-color: $blue;
   }
 
   &:hover {
@@ -105,14 +105,18 @@ body {
 
   &--sm {
     max-width: 1200px;
+    width: 100%;
   }
 }
 
 .logo {
   &__img {
-    margin-bottom: 15px;
     max-width: 150px;
     max-height: 50px;
+
+    @include r (768) {
+      margin: 0 auto 15px;
+    }
 
     @include r (414) {
       max-width: 120px;
@@ -213,7 +217,7 @@ body {
 
   input {
     border: transparent;
-    background-color: #fef7f0;
+    background-color: $gistext;
     padding: 0 0 0 15px;
   }
 

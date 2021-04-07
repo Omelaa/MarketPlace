@@ -43,7 +43,7 @@
   }
 
   &__categori {
-    color: #a3bbc8;
+    color: $button;
     display: block;
     padding-top: 15px;
     @include text-clamp(1);

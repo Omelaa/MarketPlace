@@ -3,7 +3,7 @@
 $(function(){
 
 
-  $('.header__burger').click(function () {
+  $('.header__burger, .menu__list').click(function () {
      $('.header__burger, .menu__list').toggleClass('active');
      $('body').toggleClass('lock');
     
@@ -15,8 +15,8 @@ $(function(){
       speed: 1000,
       fade: true,
       arrows: false,
-      // autoplay: true,
-      // autoplaySpeed: 2000,
+      autoplay: true,
+      autoplaySpeed: 2000,
     });
 
     $('.partners__inner').slick({
@@ -30,39 +30,60 @@ $(function(){
     {
       breakpoint: 1200,
       settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
+        slidesToShow: 5,
       }
     },
     {
      breakpoint: 990,
       settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
+        slidesToShow: 4,
       }
     },
     {
      breakpoint: 768,
       settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+     breakpoint: 414,
+      settings: {
         slidesToShow: 1,
-        slidesToScroll: 1,
       }
     }
   ]
     });
 
-      $('[fill^="#"]').removeAttr('fill');
+     $(".menu__list a, .logo, .footer__link a").on("click", function (event) {
+		event.preventDefault();
+		var id  = $(this).attr('href'),
+			top = $(id).offset().top;
+		$('body,html').animate({scrollTop: top}, 1000);
+	});
 
-      var containerEl1 = document.querySelector('[data-ref="container-1"]');
-      var containerEl2 = document.querySelector('[data-ref="container-2"]');
+     if ($(window).scrollTop() > 1){
+    $('.header ').addClass("header__sticky");
+    }
 
-      var config = {
-           controls: {
-              scope: 'local'
-                }
-            };
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 1){
+    $('.header ').addClass("header__sticky");
+    }
+    else{
+    $('.header').removeClass("header__sticky");
+    }
+  });
 
-      var mixer1 = mixitup(containerEl1, config);
-      var mixer1 = mixitup(containerEl2, config);
-        
+        var containerEl1 = document.querySelector('[data-ref="container-1"]');
+        var containerEl2 = document.querySelector('[data-ref="container-2"]');
+
+        var config = {
+            controls: {
+                scope: 'local'
+                  }
+              };
+
+        var mixer1 = mixitup(containerEl1, config);
+        var mixer1 = mixitup(containerEl2, config);
+          
 });

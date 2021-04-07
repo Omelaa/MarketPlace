@@ -73,7 +73,7 @@
     border-radius: 5px;
     box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
     transition: 0.5s;
-    z-index: 10;
+    z-index: 5;
 
     @include r (1200) {
       margin-right: 20px;
@@ -129,7 +129,7 @@
     &:focus,
     &:hover,
     &:active {
-      background-color: #b3ccd9;
+      background-color: $blue;
       outline-color: $default;
     }
 
@@ -200,7 +200,8 @@
 
 .partners {
   padding: 270px 0 0;
-  background-color: #fef7f0;
+  background-color: $gistext;
+
   z-index: -1;
   display: flex;
   align-items: flex-end;
@@ -218,6 +219,9 @@
     img {
       max-width: 300px;
       max-height: 100px;
+      @include r (414){
+        margin: 0 auto;
+      }
     }
   }
 

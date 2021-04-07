@@ -22,14 +22,14 @@
   }
 
   &__link {
-    padding: 200px 100%;
+    padding: 200px 500px;
 
     @include r (1200) {
-      padding: 200px 100%;
+      padding: 200px 200px;
     }
 
     @include r (768) {
-      padding: 75px 100%;
+      padding: 75px 90px;
 
     }
   }
@@ -62,14 +62,14 @@
       background-color: #ffffff;
       transform: scale(1.05);
 
-      path {
-        fill: rgb(163, 187, 200);
-      }
-
       &::before,
       &::after {
         background-color: #ffffff;
         border-color: #ffffff;
+      }
+
+      svg {
+        fill: rgb(163, 187, 200);
       }
     }
 
