@@ -3,6 +3,10 @@
   &__items {
     padding: 60px 0 40px;
     background-color: $bg;
+
+    @include r (990) {
+      padding: 30px 0;
+    }
   }
 
   &__wrapper {
@@ -10,10 +14,24 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
+
+    @include r (768) {
+      flex-direction: column;
+    }
   }
 
   &__text {
     margin: 0 40px 55px 0;
+
+    @include r (990) {
+      padding-left: 20px;
+      margin-right: 15px;
+    }
+
+    @include r (768) {
+
+      margin: 0px 40px 30px 0;
+    }
   }
 
   &__title {
@@ -26,6 +44,20 @@
     max-width: 495px;
     @include rubik(500);
     @include text-clamp(2);
+
+    @include r (990) {
+      font-size: 50px;
+    }
+
+    @include r (768) {
+      font-size: 22px;
+      max-width: 200px;
+      margin-bottom: 15px;
+    }
+
+    @include r (414) {
+      font-size: 18px;
+    }
   }
 
   &__desc {
@@ -35,10 +67,19 @@
     line-height: 1.6;
     @include rubik(400);
     @include text-clamp(4);
+
+    @include r (768) {
+      font-size: 14px;
+      max-width: 370px;
+    }
+
+    @include r (414) {
+      @include text-clamp(7);
+    }
   }
 
   &__element {
-    background-image: url(../images/sofa-bg.png);
+    background-image: url(../images/content/sofa-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     max-width: 640px;
@@ -50,7 +91,30 @@
     position: relative;
     left: 100px;
 
+    @include r (1200) {
+      max-width: 380px;
+      width: 100%;
+      height: 395px;
+      left: -5px;
+
+    }
+
+    @include r (768) {
+      max-width: 335px;
+      width: 100%;
+      height: 350px;
+      left: 0px;
+
+    }
+
+    @include r (414) {
+      max-width: 310px;
+      width: 100%;
+      height: 300px;
+      left: 0px;
+    }
   }
+
 
   &__img {
     height: 264px;
@@ -59,6 +123,19 @@
     position: absolute;
     left: -100px;
     top: 210px;
+
+    @include r (1200) {
+      height: 45%;
+      width: 96%;
+      left: -5px;
+      top: 120px;
+    }
+
+    @include r (414) {
+      left: 5px;
+      top: 110px;
+
+    }
   }
 
   .slick-dots {
@@ -83,6 +160,12 @@
         @include rubik(500);
         color: $sofs;
         transition: background-color 0.5s;
+
+        @include r (768) {
+          width: 20px;
+          height: 20px;
+          font-size: 9px;
+        }
 
         &:focus {
           outline-color: $default;

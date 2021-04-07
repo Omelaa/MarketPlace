@@ -2,6 +2,10 @@
   padding: 110px 0 0;
   color: #262626;
 
+  @include r (768) {
+    padding: 50px 0 0;
+  }
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
@@ -25,7 +29,7 @@
 
     &::after {
       content: "";
-      background-image: url(../images/insights/arrow.svg);
+      background-image: url(../images/content/insights/arrow.svg);
       background-repeat: no-repeat;
       background-size: cover;
       width: 7px;
@@ -55,6 +59,11 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+
+    @include r (1200) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   &__item {
@@ -65,6 +74,20 @@
     box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
     transition: 0.5s;
     z-index: 10;
+
+    @include r (1200) {
+      margin-right: 20px;
+      margin-bottom: 20px;
+    }
+
+    @include r (768) {
+      margin-right: 0;
+    }
+
+    @include r (414) {
+      max-width: 290px;
+
+    }
   }
 
   &__img {
@@ -109,6 +132,11 @@
       background-color: #b3ccd9;
       outline-color: $default;
     }
+
+    @include r (414) {
+      top: 182px;
+      left: 20px;
+    }
   }
 
   &__text {
@@ -120,6 +148,11 @@
     margin-bottom: 70px;
     @include dmsans (500);
     @include text-clamp(3);
+
+    @include r (414) {
+      @include text-clamp(4);
+
+    }
 
     &:focus,
     &:hover,

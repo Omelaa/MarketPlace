@@ -4,6 +4,7 @@
     background-color: #fef7f0;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
   }
 
   &__item {
@@ -16,6 +17,12 @@
     font-size: 16px;
     line-height: 1.9;
     padding-left: 50px;
+
+    &:not(:last-child) {
+      @include r (768) {
+        margin-bottom: 50px;
+      }
+    }
 
     &::after {
       content: "";
@@ -31,7 +38,7 @@
 
     &::before {
       content: "";
-      background-image: url(../images/hours.png);
+      background-image: url(../images/content/hours.png);
       background-repeat: no-repeat;
       width: 50px;
       height: 50px;
@@ -48,15 +55,15 @@
       }
 
       &::before {
-        background-image: url(../images/delivery-truck.png);
+        background-image: url(../images/content/delivery-truck.png);
         left: -25px;
         top: 10px;
       }
     }
 
-    &--credi {
+    &--credit {
       &::before {
-        background-image: url(../images/credit-card.png);
+        background-image: url(../images/content/credit-card.png);
       }
     }
   }

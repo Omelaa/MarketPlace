@@ -8,9 +8,18 @@
     margin-bottom: 70px;
     display: flex;
     justify-content: center;
+    overflow: auto;
+
+    @include r (414) {
+      font-size: 14px;
+    }
 
     li:not(:last-child) {
       margin-right: 15px;
+
+      @include r (414) {
+        margin-right: 0px;
+      }
     }
   }
 
@@ -61,10 +70,11 @@
 
   &__inner {
     display: grid;
-    grid-template-columns: 270px 270px 270px 270px;
-    grid-template-rows: repeat(380px);
+    grid-template-columns: repeat(auto-fill, 270px);
+    grid-template-rows: repeat(auto-fill, 380px);
     grid-gap: 30px;
     margin-bottom: 80px;
+    justify-content: center;
 
   }
 

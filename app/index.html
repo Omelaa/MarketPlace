@@ -6,24 +6,28 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Glee.</title>
-  <link rel="shortcut icon" href="images/favicon.svg" type="image/favicon.svg">
+  <link rel="shortcut icon" href="images/content/favicon.svg" type="image/content/favicon.svg">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
+<!-- @@include('./parts/_header.html') -->
 
 <body>
-
 
   <header class="header">
     <div class="container">
       <div class="header__inner">
         <a class="logo header__logo" href="#">
-          <img class="logo__img" src="images/logo.png" alt="logo">
+          <img class="logo__img" src="images/content/logo.png" alt="logo">
         </a>
+        <button class="header__burger" type="button">
+          <span></span>
+          <div class="sr-only">i'm burger menu</div>
+        </button>
         <nav class="menu">
           <ul class="menu__list">
             <li class="menu__item">
               <a href="#" class="menu__link">
-                Home +
+                Home+
               </a>
             </li>
             <li class="menu__item">
@@ -38,7 +42,7 @@
             </li>
             <li class="menu__item">
               <a href="#" class="menu__link">
-                Pages +
+                Pages+
               </a>
             </li>
             <li class="menu__item">
@@ -55,17 +59,15 @@
         </nav>
         <div class="header-actions">
           <button class="header-actions__btn" type="button">
-            <svg width="16px" height="16px">
-              <path fill-rule="evenodd" fill="rgb(36, 63, 77)"
-                d="M15.321,14.610 C14.899,15.064 13.327,16.025 11.590,14.318 L9.532,11.968 C8.752,12.313 7.891,12.507 6.983,12.507 C3.515,12.507 0.705,9.705 0.705,6.250 C0.705,2.794 3.512,-0.004 6.980,-0.004 C10.445,-0.004 13.259,2.797 13.259,6.253 C13.259,7.182 13.056,8.065 12.691,8.857 L15.027,10.893 C16.730,12.640 15.773,14.159 15.321,14.610 ZM6.980,1.305 C4.238,1.305 2.015,3.521 2.015,6.253 C2.015,8.985 4.235,11.201 6.980,11.201 C9.722,11.201 11.946,8.985 11.946,6.253 C11.946,3.521 9.722,1.305 6.980,1.305 ZM14.179,11.866 L12.017,9.986 C11.634,10.498 11.175,10.953 10.654,11.326 L12.526,13.513 C12.819,13.837 13.652,14.380 14.407,13.739 C14.616,13.563 15.040,12.671 14.179,11.866 ZM6.494,10.085 C5.683,9.923 4.937,9.535 4.351,8.954 C3.768,8.373 3.378,7.627 3.215,6.818 C3.150,6.464 3.343,6.142 3.702,6.076 C4.058,6.011 4.382,6.207 4.448,6.560 C4.544,7.142 4.803,7.627 5.227,8.049 C5.648,8.438 6.169,8.727 6.721,8.826 C7.046,8.892 7.273,9.216 7.208,9.569 C7.142,9.893 6.849,10.125 6.494,10.085 Z" />
+            <svg width="15.28" height="15.281" viewBox="0 0 15.28 15.281">
+              <use xlink:href="images/sprite.svg#search"></use>
             </svg>
             <span class="sr-only">click to open search</span>
           </button>
           <div class="header-actions__wrapper">
             <button class="header-actions__btn" type="button">
               <svg width="19px" height="17px">
-                <path fill-rule="evenodd" fill="rgb(36, 63, 77)"
-                  d="M9.913,16.244 C9.818,16.244 9.722,16.226 9.633,16.188 C9.280,16.039 0.983,12.439 0.983,5.429 C1.074,2.779 3.190,0.721 5.801,0.721 C7.544,0.721 9.067,1.639 9.913,3.031 C10.760,1.639 12.282,0.721 14.025,0.721 C16.634,0.721 18.750,2.779 18.842,5.405 C18.842,12.439 10.545,16.039 10.193,16.188 C10.103,16.226 10.008,16.244 9.913,16.244 ZM5.801,2.106 C3.954,2.106 2.458,3.576 2.393,5.452 C2.393,10.860 8.518,14.115 9.913,14.787 C11.308,14.115 17.433,10.857 17.433,5.429 C17.368,3.576 15.870,2.106 14.025,2.106 C12.180,2.106 10.683,3.576 10.617,5.452 C10.605,5.825 10.293,6.121 9.913,6.121 L9.913,6.121 C9.533,6.121 9.221,5.825 9.208,5.452 C9.144,3.576 7.647,2.106 5.801,2.106 Z" />
+                <use xlink:href="images/sprite.svg#heart"></use>
               </svg>
               <span class="sr-only">click to open the one you like</span>
               <span class="header-actions__count">0</span>
@@ -94,7 +96,6 @@
       </div>
     </div>
   </header>
-
   <main class="main">
     <h1 class="sr-only">Glee kings do not rule forever my son</h1>
     <section class="trendy">
@@ -120,7 +121,7 @@
               </div>
               <div class="trendy__element">
                 <div class="trendy__thing">
-                  <img class="trendy__img" src="images/slider/sofa.png" alt="sofa">
+                  <img class="trendy__img" src="images/content/slider/sofa.png" alt="sofa">
                 </div>
               </div>
             </div>
@@ -144,7 +145,7 @@
               </div>
               <div class="trendy__element">
                 <div class="trendy__thing">
-                  <img class="trendy__img" src="images/slider/sofa.png" alt="sofa">
+                  <img class="trendy__img" src="images/content/slider/sofa.png" alt="sofa">
                 </div>
               </div>
             </div>
@@ -168,7 +169,7 @@
               </div>
               <div class="trendy__element">
                 <div class="trendy__thing">
-                  <img class="trendy__img" src="images/slider/sofa.png" alt="sofa">
+                  <img class="trendy__img" src="images/content/slider/sofa.png" alt="sofa">
                 </div>
               </div>
             </div>
@@ -218,6 +219,7 @@
         </ul>
       </div>
     </div>
+
     <section class="products">
       <h2 class="sr-only">we need a products!</h2>
       <div class="container container--sm">
@@ -257,7 +259,7 @@
           <div class="card">
             <div class="card__inner">
               <article class="card__item mix categori-decor">
-                <img class="card__img" src="images/products/1.png" alt="">
+                <img class="card__img" src="images/content/products/1.png" alt="">
                 <h3 class="card__name">
                   Wooden radio
                 </h3>
@@ -293,7 +295,7 @@
                 </ul>
               </article>
               <article class="card__item mix categori-decor">
-                <img class="card__img" src="images/products/2.png" alt="">
+                <img class="card__img" src="images/content/products/2.png" alt="">
                 <h3 class="card__name">
                   Wooden chair
                 </h3>
@@ -329,7 +331,7 @@
                 </ul>
               </article>
               <article class="card__item mix categori-decor">
-                <img class="card__img" src="images/products/3.png" alt="">
+                <img class="card__img" src="images/content/products/3.png" alt="">
                 <h3 class="card__name">
                   White chair
                 </h3>
@@ -365,7 +367,7 @@
                 </ul>
               </article>
               <article class="card__item mix categori-furnitures">
-                <img class="card__img" src="images/products/4.png" alt="">
+                <img class="card__img" src="images/content/products/4.png" alt="">
                 <h3 class="card__name">
                   Retro table
                 </h3>
@@ -402,7 +404,7 @@
 
               </article>
               <article class="card__item mix categori-lighting ">
-                <img class="card__img" src="images/products/5.png" alt="">
+                <img class="card__img" src="images/content/products/5.png" alt="">
                 <h3 class="card__name">
                   Wooden radio
                 </h3>
@@ -438,7 +440,7 @@
                 </ul>
               </article>
               <article class="card__item mix categori-lighting">
-                <img class="card__img" src="images/products/6.png" alt="">
+                <img class="card__img" src="images/content/products/6.png" alt="">
                 <h3 class="card__name">
                   Wooden chair
                 </h3>
@@ -474,7 +476,7 @@
                 </ul>
               </article>
               <article class="card__item mix categori-decor">
-                <img class="card__img" src="images/products/7.png" alt="">
+                <img class="card__img" src="images/content/products/7.png" alt="">
                 <h3 class="card__name">
                   White chair
                 </h3>
@@ -510,7 +512,7 @@
                 </ul>
               </article>
               <article class="card__item mix categori-decor">
-                <img class="card__img" src="images/products/8.png" alt="">
+                <img class="card__img" src="images/content/products/8.png" alt="">
                 <h3 class="card__name">
                   Retro table
                 </h3>
@@ -549,12 +551,13 @@
           </div>
         </div>
       </div>
+
       <div class="lamp">
         <div class="container">
           <div class="lamp__inner">
             <article class="lamp__item">
               <div class="lamp__img lamp__img--mirun">
-                <img src="images/lamp/1.png" alt="lamp">
+                <img src="images/content/lamp/1.png" alt="lamp">
               </div>
               <div class="lamp__text">
                 <div class="lamp__title">
@@ -573,7 +576,7 @@
             <article class="lamp__item">
               <div class="lamp__wrapper">
                 <div class="lamp__img lamp__img--malesuada">
-                  <img src="images/lamp/2.png" alt="lamp">
+                  <img src="images/content/lamp/2.png" alt="lamp">
                 </div>
                 <div class="lamp__text">
                   <div class="lamp__title">
@@ -595,7 +598,6 @@
         </div>
       </div>
     </section>
-
     <section class="design">
       <h2 class="sr-only">design very good section</h2>
       <div class="container container--sm">
@@ -640,7 +642,7 @@
                 </a>
                 <span class="design__categori">Classic</span>
                 <div class="design__img">
-                  <img src="images/design/1.png" alt="sofa">
+                  <img src="images/content/design/1.png" alt="sofa">
                 </div>
               </li>
               <li class="design__item categori-decor">
@@ -650,7 +652,7 @@
                 </a>
                 <span class="design__categori">Classic</span>
                 <div class="design__img">
-                  <img src="images/design/2.png" alt="sofa">
+                  <img src="images/content/design/2.png" alt="sofa">
                 </div>
               </li>
               <li class="design__item mix categori-decor">
@@ -660,7 +662,7 @@
                 </a>
                 <span class="design__categori">Classic</span>
                 <div class="design__img design__img--rattan">
-                  <img src="images/design/3.png" alt="sofa">
+                  <img src="images/content/design/3.png" alt="sofa">
                 </div>
               </li>
               <li class="design__item mix categori-decor">
@@ -670,7 +672,7 @@
                 </a>
                 <span class="design__categori">Classic</span>
                 <div class="design__img">
-                  <img src="images/design/4.png" alt="sofa">
+                  <img src="images/content/design/4.png" alt="sofa">
                 </div>
               </li>
               <li class="design__item mix categori-chairs">
@@ -680,7 +682,7 @@
                 </a>
                 <span class="design__categori">Classic</span>
                 <div class="design__img design__img--rocking">
-                  <img src="images/design/5.png" alt="sofa">
+                  <img src="images/content/design/5.png" alt="sofa">
                 </div>
               </li>
               <li class="design__item categori-furnitures">
@@ -690,14 +692,15 @@
                 </a>
                 <span class="design__categori">Classic</span>
                 <div class="design__img">
-                  <img src="images/design/6.png" alt="sofa">
+                  <img src="images/content/design/6.png" alt="sofa">
                 </div>
               </li>
             </ul>
           </div>
         </div>
       </div>
-      <div class="video" style="background-image: url(images/video-bg.jpg);">
+
+      <div class="video" style="background-image: url(images/content/video-bg.jpg);">
         <div class="video__inner">
           <a class="video__link" href="https://www.youtube.com/watch?v=ekNqR_2iRVM" data-fancybox>
             <div class="video__play">
@@ -726,7 +729,7 @@
         <ul class="insights__inner">
           <li class="insights__item">
             <a class="insights__img" href="#">
-              <img src="images/insights/1.png" alt="interier">
+              <img src="images/content/insights/1.png" alt="interier">
             </a>
             <a class="insights__news" href="#">
               news
@@ -747,7 +750,7 @@
           </li>
           <li class="insights__item">
             <a class="insights__img" href="#">
-              <img src="images/insights/2.png" alt="interier">
+              <img src="images/content/insights/2.png" alt="interier">
             </a>
             <a class="insights__news" href="#">
               news
@@ -768,7 +771,7 @@
           </li>
           <li class="insights__item">
             <a class="insights__img" href="#">
-              <img src="images/insights/3.png" alt="interier">
+              <img src="images/content/insights/3.png" alt="interier">
             </a>
             <a class="insights__news" href="#">
               news
@@ -789,57 +792,58 @@
           </li>
         </ul>
       </div>
+
       <div class="partners">
         <div class="container container--sm">
           <ul class="partners__inner">
             <li class="partners__list">
               <div class="partners__item">
-                <img src="images/partners/1.png" alt="partner peterson">
+                <img src="images/content/partners/1.png" alt="partner peterson">
               </div>
             </li>
             <li class="partners__list">
               <div class="partners__item">
-                <img src="images/partners/2.png" alt="partner kmn">
+                <img src="images/content/partners/2.png" alt="partner kmn">
               </div>
             </li>
             <li class="partners__list">
               <div class="partners__item">
-                <img src="images/partners/3.png" alt="partner chainforse">
+                <img src="images/content/partners/3.png" alt="partner chainforse">
               </div>
             </li>
             <li class="partners__list">
               <div class="partners__item">
-                <img src="images/partners/4.png" alt="partner nextg3n">
+                <img src="images/content/partners/4.png" alt="partner nextg3n">
               </div>
             </li>
             <li class="partners__list">
               <div class="partners__item">
-                <img src="images/partners/5.png" alt="partner vintage">
+                <img src="images/content/partners/5.png" alt="partner vintage">
               </div>
             </li>
             <li class="partners__list">
               <div class="partners__item">
-                <img src="images/partners/1.png" alt="partner peterson">
+                <img src="images/content/partners/1.png" alt="partner peterson">
               </div>
             </li>
             <li class="partners__list">
               <div class="partners__item">
-                <img src="images/partners/2.png" alt="partner kmn">
+                <img src="images/content/partners/2.png" alt="partner kmn">
               </div>
             </li>
             <li class="partners__list">
               <div class="partners__item">
-                <img src="images/partners/3.png" alt="partner chainforse">
+                <img src="images/content/partners/3.png" alt="partner chainforse">
               </div>
             </li>
             <li class="partners__list">
               <div class="partners__item">
-                <img src="images/partners/4.png" alt="partner nextg3n">
+                <img src="images/content/partners/4.png" alt="partner nextg3n">
               </div>
             </li>
             <li class="partners__list">
               <div class="partners__item">
-                <img src="images/partners/5.png" alt="partner vintage">
+                <img src="images/content/partners/5.png" alt="partner vintage">
               </div>
             </li>
           </ul>
@@ -847,14 +851,14 @@
       </div>
     </section>
   </main>
-
+          <!--
   <footer class="footer">
     <h2 class="sr-only">it's end</h2>
     <div class="container container--sm">
       <ul class="footer__inner">
         <li class="footer__info">
           <a class="logo foorter__logo" href="#">
-            <img class="logo__img" src="images/logo.png" alt="logotype">
+            <img class="logo__img" src="images/content/logo.png" alt="logotype">
           </a>
           <address class="footer__address">
             <a class="footer__link" target="_blank" href="https://goo.gl/maps/LnSR9R2pTsgEjj1d9">
@@ -978,13 +982,13 @@
         </div>
       </div>
     </div>
-  </footer>
+  </footer> -->
 
 
 
 
 
-  <script src="js/main.min.js"></script>
+    <script src="js/main.min.js"></script>
 </body>
 
 </html>

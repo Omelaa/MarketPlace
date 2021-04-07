@@ -1,21 +1,119 @@
 .header {
   padding: 50px 0;
 
+  @include r (768) {
+    padding: 20px 0;
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include r (768) {
+      flex-wrap: wrap;
+    }
   }
 
   &__logo {
     margin-right: 135px;
     max-width: 180px;
     height: 50px;
+    z-index: 10;
+
+    @include r(1200) {
+      margin-right: 0;
+    }
+
+    @include r(990) {
+      margin-right: auto;
+    }
   }
 
+  &__burger {
+    display: none;
+    border: 0;
+    background-color: inherit;
+    width: 35px;
+    height: 26px;
+    padding: 0;
+    position: relative;
+    order: 1;
+    z-index: 10;
+
+    @include r(990) {
+      display: flex;
+    }
+
+    @include r(768) {
+      order: 0;
+    }
+
+    &.active {
+      transition: transform 0.5s;
+
+      &::before {
+        transform: rotate(45deg);
+        bottom: 12px;
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+        top: 11px;
+      }
+
+      span {
+        transform: scale(0);
+      }
+    }
+
+    &::after,
+    &::before {
+      content: "";
+      width: 100%;
+      height: 3px;
+      background-color: $button;
+      position: absolute;
+      transition: transform 0.5s;
+
+    }
+
+    &::after {
+      top: 0;
+    }
+
+    &::before {
+      bottom: 0;
+    }
+
+    span {
+      width: 100%;
+      height: 3px;
+      background-color: $button;
+      position: absolute;
+      top: 12px;
+      transition: transform 0.5s;
+    }
+  }
 
   .header-actions {
     display: flex;
+    z-index: 10;
+
+    @include r(990) {
+      margin-right: -15px;
+    }
+
+    @include r(768) {
+      transform: rotate(90deg);
+      position: absolute;
+      right: -75px;
+      top: 165px;
+
+      svg {
+        transform: rotate(-90deg);
+      }
+    }
 
     &__btn {
       border: 0;
@@ -34,12 +132,12 @@
       &:focus,
       &:hover,
       &:active {
-        path {
+        svg {
           fill: $blue;
         }
       }
 
-      path {
+      svg {
         transition: fill 0.5s;
       }
 
@@ -56,6 +154,14 @@
       display: flex;
       justify-content: center;
       margin: 0;
+
+      @include r(1200) {
+        width: 150px;
+      }
+
+      @include r(990) {
+        width: 120px;
+      }
 
       .header-actions__btn {
         background-color: $bg;
@@ -79,6 +185,12 @@
       align-items: center;
       @include dmsans(400);
       color: #243f4d;
+
+      @include r (768) {
+        top: 5px;
+        left: 10px;
+        transform: rotate(90deg);
+      }
     }
 
     &__border {
@@ -86,6 +198,14 @@
       height: 32px;
       position: absolute;
       left: 90px;
+
+      @include r(1200) {
+        left: 75px;
+      }
+
+      @include r(990) {
+        left: 60px;
+      }
     }
 
     &__wrapper,
@@ -95,6 +215,10 @@
 
       &:not(:last-child) {
         margin-right: 15px;
+
+        @include r(1200) {
+          margin-right: 10px;
+        }
       }
 
 
