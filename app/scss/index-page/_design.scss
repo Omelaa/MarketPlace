@@ -17,24 +17,25 @@
   &__title {
     margin-bottom: 25px;
   }
+}
 
-  &__item {
-    padding: 30px 30px 30px 35px;
-    background-color: #f8f8f8;
-    width: 370px;
-    height: 245px;
-    position: relative;
-    @include dmsans(700);
-    transition: opacity 0.5s;
+.design-card {
+  padding: 30px 30px 30px 35px;
+  background-color: #f8f8f8;
+  width: 370px;
+  height: 245px;
+  position: relative;
+  @include dmsans(700);
+  transition: opacity 0.5s;
 
-    @include r (414) {
-      max-width: 345px;
-    }
-
-    &:hover {
-      opacity: 0.9;
-    }
+  @include r (414) {
+    max-width: 345px;
   }
+
+  &:hover {
+    opacity: 0.9;
+  }
+
 
   &__subtitle {
     font-size: 20px;

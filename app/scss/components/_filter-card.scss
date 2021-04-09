@@ -46,7 +46,7 @@
   }
 }
 
-.card {
+.product-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -60,7 +60,7 @@
   position: relative;
 
   &:hover {
-    .card__box {
+    .product-card__box {
       opacity: 1;
     }
   }
