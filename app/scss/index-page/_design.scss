@@ -14,6 +14,10 @@
     }
   }
 
+  &__title {
+    margin-bottom: 25px;
+  }
+
   &__item {
     padding: 30px 30px 30px 35px;
     background-color: #f8f8f8;
@@ -21,9 +25,14 @@
     height: 245px;
     position: relative;
     @include dmsans(700);
+    transition: opacity 0.5s;
 
     @include r (414) {
       max-width: 345px;
+    }
+
+    &:hover {
+      opacity: 0.9;
     }
   }
 
@@ -54,17 +63,18 @@
     position: absolute;
     right: 0px;
     bottom: 40px;
-    max-height: 150px;
     max-width: 280px;
+    max-height: 178px;
 
     @include r (414) {
       bottom: 12px;
     }
 
+
     &--rattan {
       right: 55px;
       bottom: 50px;
-      width: 115px;
+      max-width: 115px;
       height: 145px;
 
       @include r (414) {
@@ -74,8 +84,8 @@
 
     &--rocking {
       right: 30px;
-      bottom: 60px;
-      width: 142px;
+      bottom: 30px;
+      max-width: 142px;
       height: 178px;
 
       @include r (414) {

@@ -1,4 +1,4 @@
-.lamp {
+.product-lamps {
 
   &__inner {
     padding: 125px 0 0;
@@ -10,14 +10,10 @@
       justify-content: center;
 
     }
-  }
 
-  &__wrapper {
-    max-width: 600px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include r (768) {
+      padding: 0;
+    }
   }
 
   &__item {
@@ -32,20 +28,37 @@
       margin-right: 30px;
 
       @include r (1200) {
-        margin-bottom: 150px;
+        margin-bottom: 50px;
       }
 
       @include r (990) {
         margin-right: 0;
 
       }
-
-      @include r (414) {
-        margin-bottom: 90px;
-      }
     }
-
   }
+}
+
+.lamp {
+
+  &__img {
+    max-width: 235px;
+    max-height: 410px;
+    transform: translateY(-90px);
+
+    @include r(768) {
+      transform: translateY(0px);
+    }
+  }
+
+  &__wrapper {
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
 
   &__text {
     max-width: 340px;

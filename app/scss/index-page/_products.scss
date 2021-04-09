@@ -1,4 +1,20 @@
 .products {
   padding: 45px 0 75px;
 
+  @include r (768) {
+    padding: 50px 0;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 270px);
+    grid-template-rows: repeat(auto-fill, 380px);
+    grid-gap: 30px;
+    margin-bottom: 80px;
+    justify-content: center;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+  }
 }

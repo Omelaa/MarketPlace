@@ -82,6 +82,8 @@
 
     @include r (768) {
       margin-right: 0;
+      max-width: 425px;
+      width: 100%;
     }
 
     @include r (414) {
@@ -91,24 +93,27 @@
   }
 
   &__img {
+    max-width: 370px;
+    width: 100%;
+    max-height: 250px;
+    margin-bottom: 35px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    transition: opacity 0.5s;
 
-    img {
-      max-width: 370px;
-      width: 100%;
-      max-height: 250px;
-      margin-bottom: 35px;
-      border-top-right-radius: 5px;
-      border-top-left-radius: 5px;
-      transition: opacity 0.5s;
-    }
-
-    img:focus,
-    img:hover,
-    img:active {
+    &:focus,
+    &:hover,
+    &:active {
       opacity: 0.9;
       outline-color: $default;
     }
+
+    @include r (768) {
+      max-width: 480px;
+
+    }
   }
+
 
   &__news {
     background-color: rgb(163, 187, 200);
@@ -181,12 +186,13 @@
   }
 
   &__date,
-  &__by {
+  &__author {
     @include text-clamp(1);
     max-width: 130px;
   }
 
-  &__by {
+  &__author {
+    max-width: 180px;
     transition: color 0.5s;
 
     &:focus,
@@ -201,13 +207,16 @@
 .partners {
   padding: 270px 0 0;
   background-color: $gistext;
-
   z-index: -1;
   display: flex;
   align-items: flex-end;
   margin-top: -170px;
 
-  &__inner {
+  @include r (414) {
+    padding: 200px 0 0;
+  }
+
+  &__items {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -219,7 +228,8 @@
     img {
       max-width: 300px;
       max-height: 100px;
-      @include r (414){
+
+      @include r (414) {
         margin: 0 auto;
       }
     }

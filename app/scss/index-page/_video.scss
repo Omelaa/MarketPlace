@@ -10,28 +10,14 @@
 
   @include r (990) {
     height: 350px;
-
   }
 
   @include r (414) {
-    height: 250px;
+    height: 235px;
   }
 
   &:hover {
     opacity: 0.9;
-  }
-
-  &__link {
-    padding: 200px 500px;
-
-    @include r (1200) {
-      padding: 200px 200px;
-    }
-
-    @include r (768) {
-      padding: 75px 90px;
-
-    }
   }
 
   &__inner {
@@ -53,9 +39,15 @@
       width: 127px;
       height: 127px;
       background-color: rgb(163, 187, 200);
-      opacity: 0.4;
-      animation: pulse 1.5s infinite;
-      z-index: -1;
+      content: "";
+      position: absolute;
+      border: 10px solid $button;
+      left: -13px;
+      right: -20px;
+      top: -13px;
+      border-radius: 50%;
+      opacity: 0;
+      animation: pulse 1.5s linear infinite;
     }
 
     &:hover {
@@ -78,19 +70,22 @@
       left: 41px;
       top: 38px;
     }
+  }
+}
 
+@keyframes pulse {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
 
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      border: 10px solid $button;
-      left: -13px;
-      right: -20px;
-      top: -13px;
-      border-radius: 50%;
-      opacity: 0;
-      animation: pulse 1.5s linear infinite;
-    }
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.2);
   }
 }

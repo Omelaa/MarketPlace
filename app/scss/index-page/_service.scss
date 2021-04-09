@@ -32,6 +32,10 @@
       position: absolute;
       top: 35px;
       left: 12px;
+
+      @include r (414) {
+        left: 25px;
+      }
     }
 
     &::before {
@@ -43,6 +47,10 @@
       position: absolute;
       left: -20px;
       top: 0;
+
+      @include r (414) {
+        left: -5px;
+      }
     }
 
     &--car {
@@ -50,12 +58,20 @@
       &::after {
         top: 28px;
         left: 8px;
+
+        @include r (414){
+          left: 15px;
+        }
       }
 
       &::before {
         background-image: url(../images/content/delivery-truck.png);
         left: -25px;
         top: 10px;
+
+        @include r (414) {
+          left: -15px;
+        }
       }
     }
 

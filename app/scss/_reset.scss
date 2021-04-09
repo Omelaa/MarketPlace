@@ -57,16 +57,19 @@ input,
 button,
 textarea,
 select {
+  outline: transparent;
   font: inherit;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+  outline: transparent;
 }
 
 button {
   cursor: pointer;
+  outline: transparent;
 }
 
 address {

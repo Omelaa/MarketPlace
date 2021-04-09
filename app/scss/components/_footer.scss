@@ -20,9 +20,8 @@
     }
 
     @include r (768) {
-      flex-direction: column;
-      align-items: center;
       text-align: center;
+      justify-content: center;
     }
   }
 
@@ -31,6 +30,11 @@
 
     @include r (768) {
       margin-bottom: 20px;
+      margin-right: 50px;
+    }
+
+    @include r (414) {
+      margin-right: 0;
     }
   }
 
@@ -74,12 +78,26 @@
     }
 
     @include r (768) {
+      margin-right: 50px;
+      order: 1;
+    }
+
+    @include r (414) {
       margin-right: 0;
     }
   }
 
   &__letter {
     max-width: 270px;
+    margin-right: 50px;
+
+    @include r (768) {
+      margin-bottom: 50px;
+    }
+
+    @include r (414) {
+      margin-right: 0;
+    }
   }
 
   &__text {
@@ -90,12 +108,19 @@
   &__description {
     padding: 35px 0;
     border-top: 1px solid #dae4e9;
+
   }
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include r (768) {
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center
+    }
   }
 
   &__desc {
@@ -103,8 +128,11 @@
     max-width: 800px;
 
     @include r (990) {
-      margin: 0 auto;
       @include text-clamp(2);
+    }
+
+    @include r (768) {
+      margin-right: 15px;
     }
   }
 
@@ -114,6 +142,7 @@
 
   .menu__item {
     display: flex;
+    font-size: 14px;
     @include rubik(400);
 
     &:not(:last-child) {
@@ -128,7 +157,7 @@
 
   &__menu {
     @include r (990) {
-      display: none;
+      display: flex;
     }
   }
 }
