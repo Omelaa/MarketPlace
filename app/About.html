@@ -6,77 +6,18 @@
 
 <body>
 
-
-
-  @@include('./parts/_header.html')
-
   <main class="main">
     <h1 class="sr-only">It's page number two</h1>
-    <section class="about">
-      <div class="breadcrumbs">
-        <h2 class="breadcrumbs__title">
-          About Us
-        </h2>
-        <ul class="breadcrumbs__items">
-          <li class="breadcrumbs__item">
-            <a href="#">
-              Home
-            </a>
-          </li>
-          <li class="breadcrumbs__item">
-            <a href="#">
-              About Us
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="container container--sm">
-        <div class="about__inner">
-          <div class="about__image">
-            <img src="images/content/about/man.jpg" alt="imacpro">
-          </div>
-
-          <div class="about__wrapper">
-            <div class="about__experience">
-              <span>12</span>
-              <p>
-                Years Experience Working
-              </p>
-            </div>
-            <div class="title about__title">
-              Mission of our creative house
-            </div>
-            <div class="about__text">
-              <p>
-                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-              </p>
-            </div>
-            <ul class="about__statistic">
-              <li class="about__description about__description--text">
-                520+
-                <span>Projects</span>
-              </li>
-
-              <li class="about__description about__description--fonor">
-                $4M
-                <span>Revenue</span>
-              </li>
-
-              <li class="about__description about__description--first">
-                250
-                <span>Awards</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+    @@include('./parts/_header.html')
+    @@include('./parts/_breadcrumbs.html')
+    @@include('./parts/_about.html')
+    @@include('./parts/_team.html')
+    @@include('./parts/_insight.html')
+    @@include('./parts/_footer.html')
   </main>
 
 
-
+  @@include('./parts/_scripts.html')
 </body>
 
 </html>

@@ -1,0 +1,48 @@
+.breadcrumbs {
+  padding: 20px 0;
+  background-color: $whitebg;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+
+  &__title {
+    font-size: 36px;
+    line-height: 1.5;
+    color: #222933;
+    @include rubik (300);
+    @include text-clamp(1);
+    max-width: 300px;
+  }
+
+  &__items {
+    display: flex;
+    @include rubik (300);
+    font-size: 14px;
+    line-height: 1.7;
+    color: #888c91;
+  }
+
+  &__item {
+    @include text-clamp(1);
+    max-width: 150px;
+
+    &:not(:last-child) {
+      margin-right: 5px;
+
+      &::after {
+        content: "/";
+      }
+    }
+
+    a {
+      transition: color 0.5s;
+
+      &:focus,
+      &:hover,
+      &:active {
+        color: $button;
+      }
+    }
+  }
+}

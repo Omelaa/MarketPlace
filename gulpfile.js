@@ -115,7 +115,7 @@ function watching() {
   watch(['app/js/**/*.js','!app/js/main.min.js'], scripts);
   watch(['app/**/*.html']).on('change', browserSync.reload);
   watch(['app/*.html'], html);
-  watch('app/images/content/*', parallel ('images'));
+  watch('app/images/content/**/*', parallel ('images'));
   watch('app/images/sprite/*', parallel ('svgSprite'));
   watch('app/fonts/*', parallel ('fonts'));
 }

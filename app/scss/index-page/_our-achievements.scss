@@ -1,0 +1,117 @@
+.our-achievements {
+  padding: 90px 0;
+  background-color: $bg;
+  display: flex;
+  justify-content: center;
+
+  @include r (990) {
+    padding: 75px 0;
+  }
+
+  @include r(768) {
+    padding: 50px 0 30px;
+
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    color: $sofs;
+
+    @include r (768) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    text-align: center;
+    @include dmsans(700);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    @include r (768) {
+      margin-bottom: 20px;
+    }
+
+    &::before {
+      content: "";
+      background-repeat: no-repeat;
+      width: 67px;
+      height: 64px;
+      display: block;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
+
+    &--rate {
+      padding-left: 35px;
+
+      @include r (768) {
+        margin-right: 20px;
+        padding-left: 0;
+      }
+
+      &::before {
+        background-image: url(../images/content/team/rate.png);
+      }
+    }
+
+    &--car {
+      margin-right: 20px;
+
+      &::before {
+        background-image: url(../images/content/team/car.png);
+      }
+    }
+
+    &--time {
+      margin-right: 25px;
+
+      &::before {
+        background-image: url(../images/content/team/time.png);
+      }
+    }
+
+    &--stone {
+      margin-right: 65px;
+
+      @include r (768) {
+        margin-right: 20px;
+      }
+
+      &::before {
+        background-image: url(../images/content/team/stone.png);
+      }
+    }
+
+    &::after {
+      content: "";
+      border-radius: 50%;
+      background-color: $button;
+      opacity: 0.8;
+      width: 35px;
+      height: 35px;
+      position: absolute;
+      top: 27px;
+      right: 45px;
+    }
+
+    span {
+      font-size: 36px;
+      line-height: 1.1;
+      margin-bottom: 10px;
+      @include text-clamp(1);
+      max-width: 150px;
+    }
+
+    p {
+      font-size: 18px;
+      @include text-clamp(1);
+      max-width: 250px;
+    }
+  }
+}

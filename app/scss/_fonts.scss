@@ -67,3 +67,12 @@
     url('../fonts/Poppins-Bold.woff') format('woff');
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Poppins-SemiBold';
+  font-weight: 600;
+  font-style: normal;
+  src: url('../fonts/Poppins-SemiBold.woff2') format('woff2'),
+    url('../fonts/Poppins-SemiBold.woff') format('woff');
+  font-display: swap;
+}

@@ -16,6 +16,7 @@
     line-height: 1.9;
     padding-left: 50px;
 
+
     &:not(:last-child) {
       @include r (768) {
         margin-bottom: 50px;
