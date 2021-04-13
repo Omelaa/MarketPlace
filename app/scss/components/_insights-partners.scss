@@ -21,10 +21,10 @@
   &__link {
     @include dmsans(700);
     display: flex;
-    margin-right: 30px;
+    padding-right: 30px;
     position: relative;
     max-width: 100px;
-    transition: color 0.5s;
+    transition: opacity 0.5s;
 
 
     &::after {
@@ -36,14 +36,14 @@
       height: 12px;
       display: block;
       position: absolute;
-      right: -30px;
+      right: 0px;
       top: 8px;
     }
 
     &:focus,
     &:hover,
     &:active {
-      color: $default;
+      opacity: 0.6;
 
       &::after {
         animation: arrow 0.5s linear;
@@ -149,7 +149,7 @@
     font-size: 18px;
     line-height: 1.2;
     max-width: 345px;
-    transition: color 0.5s;
+    transition: opacity 0.5s;
     margin-bottom: 70px;
     @include dmsans (500);
     @include text-clamp(3);
@@ -162,7 +162,7 @@
     &:focus,
     &:hover,
     &:active {
-      color: $default;
+      opacity: 0.6;
       outline-color: $default;
     }
   }
@@ -181,25 +181,44 @@
     @include rubik(400);
   }
 
-  &__date {
-    margin-right: 35px;
-  }
-
   &__date,
   &__author {
-    @include text-clamp(1);
-    max-width: 130px;
+    // @include text-clamp(1);
+    max-width: 150px;
+    padding-left: 20px;
+    position: relative;
+
+    &::before {
+      content: "";
+      background-image: url(../../images/content/author.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      bottom: 8px;
+      left: 0;
+    }
+  }
+
+  &__date {
+    margin-right: 35px;
+
+    &::before {
+      background-image: url(../../images/content/calendar.svg);
+    }
   }
 
   &__author {
     max-width: 180px;
-    transition: color 0.5s;
+    transition: opacity 0.5s;
 
     &:focus,
     &:hover,
     &:active {
-      color: $default;
+      opacity: 0.6;
       outline-color: $default;
+
     }
   }
 }

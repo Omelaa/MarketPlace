@@ -28,12 +28,14 @@
       margin-right: 30px;
 
       @include r (1200) {
-        margin-bottom: 50px;
-      }
-
-      @include r (990) {
+        margin-bottom: 120px;
         margin-right: 0;
 
+      }
+
+      @include r (768) {
+        margin-bottom: 60px;
+        margin-right: 0;
       }
     }
   }
@@ -114,7 +116,7 @@
     margin-right: 10px;
 
     @include r (414) {
-      padding: 20px 35px 16px 10px;
+      padding: 20px 55px 16px 10px;
     }
 
     &:hover {

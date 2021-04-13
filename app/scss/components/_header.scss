@@ -152,6 +152,7 @@
     right: -67px;
     top: 170px;
     margin-right: -15px;
+  
 
     svg {
       transform: rotate(-90deg);
@@ -262,6 +263,20 @@
         margin-right: 10px;
       }
     }
+  }
+}
 
+
+@keyframes user {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(45deg);
+  }
+
+  100% {
+    transform: rotate(90deg);
   }
 }

@@ -8,8 +8,10 @@ $(function(){
      $('body').toggleClass('lock');
   });
 
-  $('.header__slider').on('click', function() {
-    $('.header-actions').fadeToggle();
+  $('.header-actions').show('click');
+   $('.header__slider').click(function() {
+    $('.header-actions').fadeToggle('false');
+    $('.header__slider').toggleClass('button-active');
   });
 
     $('.trendy__items').slick({
