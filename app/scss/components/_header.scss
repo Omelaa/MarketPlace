@@ -25,6 +25,32 @@
     }
   }
 
+
+  & .menu__list {
+    @include r(990) {
+      position: fixed;
+      top: -200%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #ffffff;
+      opacity: 0.9;
+      z-index: -3;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 130px;
+      text-align: center;
+      transition: top 0.7s;
+      overflow: auto;
+    }
+
+    &.active {
+      @include r (990) {
+        top: 0;
+      }
+    }
+  }
+
   &__logo {
     margin-right: 135px;
     width: 146px;
@@ -152,7 +178,7 @@
     right: -67px;
     top: 170px;
     margin-right: -15px;
-  
+
 
     svg {
       transform: rotate(-90deg);

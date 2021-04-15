@@ -23,10 +23,10 @@
       </a>
       <button class="header__burger" type="button" name="button">
         <span></span>
+        <span class="sr-only">i'm burger menu</span> 
       </button>
-      <span class="sr-only" for="button">i'm burger menu</span>
       <nav class="menu">
-        <ul class=" menu__list menu__list--burger">
+        <ul class=" menu__list">
           <li class="menu__item">
             <a class="menu__link" href="#">
               Home+
@@ -177,7 +177,6 @@
        </li>
      </ul>
      <div class="service">
-       <h2 class="sr-only">service it's a top section</h2>
        <ul class="service__inner">
          <li class="service__item service__item--hinsightss">
            <span class="service__title">
@@ -218,11 +217,10 @@
    </div>
  </section>
       <section class="products" id="products">
-    <h2 class="sr-only">we need a products!</h2>
     <div class="container container--sm">
-      <h3 class="title products__title">
+      <h2 class="title products__title">
         Products of the week
-      </h3>
+      </h2>
       <div class="filter" data-ref="container-1" id="MixItUpD9E6CA">
         <ul class="filter__list">
           <li>
@@ -709,12 +707,11 @@
       </a>
     </section>
      <section class="insights">
-   <h2 class="sr-only">insights can win!</h2>
    <div class="container container--sm">
      <div class="insights__wrapper">
-       <h3 class="title insights__title">
+       <h2 class="title insights__title">
          Our Insights & Articles
-       </h3>
+       </h2>
        <a class="insights__link" href="#">
          View <span>aII</span>
        </a>
@@ -914,7 +911,7 @@
          </div>
          <form class="email-form" action="#">
            <label class="sr-only" for="email">You email</label>
-           <input type="email" placeholder="Email address" name="email" id="email" required>
+           <input class="email-form__address" type="email" placeholder="Email address" name="email" id="email" required>
            <button class="button email-form__btn" type="submit">
              Subscribe
            </button>
@@ -958,5 +955,5 @@
 
   <script src="js/main.min.js"></script>
 </body>
-
+ 
 </html>
