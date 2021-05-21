@@ -11,14 +11,64 @@
   <main class="main">
     <h1 class="sr-only">product page</h1>
     @@include('./parts/_header.html')
+    @@include('./parts/_breadcrumbs.html',{
+    "subtitle": "Product list 1",
+    "start": "Home",
+    "end": "Product list 1"})
+
+    <section class="shop">
+      <div class="container container--sm">
+        <div class="shop__inner">
+          <div class="filter">
+            <div class="filter__category">
+              <div class="filter__title">
+                category
+                <span></span>
+              </div>
+              <ul class="filter__items">
+                <li>
+                  <button class="filter__item" type="button">
+                    Chair
+                  </button>
+                </li>
+                <li>
+                  <button class="filter__item" type="button">
+                    Table
+                  </button>
+                </li>
+                <li>
+                  <button class="filter__item" type="button">
+                    Lamp
+                  </button>
+                </li>
+                <li>
+                  <button class="filter__item" type="button">
+                    Watch
+                  </button>
+                </li>
+                <li>
+                  <button class="filter__item" type="button">
+                    Clock
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          .
+        </div>
+      </div>
+    </section>
 
 
-    @@include('./parts/_partnersgi.html')
-    @@include('./parts/_footer.html')
+
+
+
+    <!-- @@include('./parts/_partners.html') -->
+    <!-- @@include('./parts/_footer.html') -->
 
   </main>
 
-  @@include('./parts/_scripts.html')
+  <!-- @@include('./parts/_scripts.html') -->
 </body>
 
 </html>

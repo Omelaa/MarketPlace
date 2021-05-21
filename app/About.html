@@ -9,7 +9,10 @@
   <main class="main">
     <h1 class="sr-only">It's page number two</h1>
     @@include('./parts/_header.html')
-    @@include('./parts/_breadcrumbs.html')
+    @@include('./parts/_breadcrumbs.html',{
+    "subtitle": "About Us",
+    "start": "Home",
+    "end": "About Us"})
     @@include('./parts/_about.html')
     @@include('./parts/_team.html')
     @@include('./parts/_insight.html')

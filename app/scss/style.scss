@@ -9,3 +9,76 @@
 @import 'components/insights-partners';
 @import 'components/breadcrumbs';
 @import 'index-page';
+
+
+.filter {
+  padding: 120px 0;
+  color: $sofs;
+  max-width: 270px;
+  width: 100%;
+
+  &__title {
+    @include dmsans(700);
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-bottom: 30px;
+    position: relative;
+
+    span {
+      border-bottom: 2px solid $button;
+      max-width: 40px;
+      width: 100%;
+      position: absolute;
+      left: 115px;
+      top: 16px;
+    }
+  }
+
+  &__items {
+    li {
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  &__item {
+    border: 0;
+    background-color: inherit;
+    color: $sofs;
+    padding: 5px 215px 5px 15px;
+    max-width: 270px;
+    width: 100%;
+    border-radius: 5px;
+    @include rubik(400);
+    transition: background 0.5s;
+    position: relative;
+
+    &::after {
+      content: "";
+      background-image: url(../images/content/insights/arrow.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 6px;
+      height: 10px;
+      display: block;
+      position: absolute;
+      right: 20px;
+      top: 15px;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $whitebg;
+    }
+
+    &:active,
+    &:focus {
+      background-color: $blue;
+
+      &::after {
+        animation: arrow-reverse 0.5s linear;
+      }
+    }
+  }
+}
