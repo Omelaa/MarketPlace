@@ -11,7 +11,7 @@
 @import 'index-page';
 
 
-.filter {
+.filter-shop {
   padding: 120px 0;
   color: $sofs;
   max-width: 270px;
@@ -21,20 +21,23 @@
     @include dmsans(700);
     text-transform: uppercase;
     font-size: 18px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     position: relative;
 
-    span {
+    &:after {
+      content: "";
       border-bottom: 2px solid $button;
       max-width: 40px;
       width: 100%;
       position: absolute;
-      left: 115px;
       top: 16px;
+      transform: translateX(15px);
     }
   }
 
   &__items {
+    margin-bottom: 45px;
+
     li {
       &:not(:last-child) {
         margin-bottom: 5px;
@@ -43,16 +46,42 @@
   }
 
   &__item {
-    border: 0;
-    background-color: inherit;
+    cursor: pointer;
+  }
+
+  &__input {
+    @include checkbox-hidden;
+
+    &:checked+.filter-shop__checkbox {
+      background-color: $whitebg;
+      padding: 6px 215px 6px 15px;
+      border-radius: 5px;
+
+      &::after {
+        animation: arrow-reverse 0.5s linear;
+      }
+    }
+
+    &:checked+.filter-shop__checkbox--numb {
+      padding: 6px 20px 6px 15px;
+
+      span:last-child {
+        color: $sofs;
+      }
+    }
+  }
+
+  &__checkbox {
     color: $sofs;
-    padding: 5px 215px 5px 15px;
-    max-width: 270px;
-    width: 100%;
     border-radius: 5px;
     @include rubik(400);
     transition: background 0.5s;
     position: relative;
+    padding: 6px 215px 6px 15px;
+    max-width: 270px;
+    width: 100%;
+    display: block;
+    margin-bottom: 5px;
 
     &::after {
       content: "";
@@ -68,17 +97,83 @@
     }
 
     &:hover,
+    &:active,
     &:focus {
       background-color: $whitebg;
     }
+  }
 
-    &:active,
-    &:focus {
-      background-color: $blue;
+  &__checkbox--numb {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 20px 6px 15px;
 
-      &::after {
-        animation: arrow-reverse 0.5s linear;
-      }
+    span:last-child {
+      color: #b3b3b3;
     }
+
+    &::after {
+      content: "";
+      display: none;
+    }
+  }
+
+  &__price {
+    position: relative;
+  }
+}
+
+.price-line {
+  margin-bottom: 75px;
+
+  &__lable {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__from,
+  &__to {
+    @include rubik(400);
+    color: #334c59;
+
+    &::before {
+      content: "$";
+    }
+
+    &::after {
+      content: ".00";
+    }
+  }
+}
+
+.irs--flat .irs-line {
+  height: 2px;
+  background-color: #c2d2db;
+  top: 6px;
+}
+
+.irs--flat .irs-bar {
+  background-color: $button;
+  height: 4px;
+  top: 5px;
+}
+
+.irs--flat {
+  height: 30px;
+}
+
+.irs--flat .irs-handle>i:first-child {
+  display: none;
+}
+
+.irs--flat .irs-handle {
+  width: 15px;
+  height: 15px;
+  background-color: $button;
+  top: 0px;
+  cursor: pointer;
+
+  &:hover {
+    color: red;
   }
 }

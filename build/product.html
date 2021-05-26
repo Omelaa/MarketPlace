@@ -120,42 +120,96 @@
     <section class="shop">
       <div class="container container--sm">
         <div class="shop__inner">
-          <div class="filter">
-            <div class="filter__category">
-              <div class="filter__title">
+          <div class="filter-shop">
+            <div class="filter-shop__category">
+              <h3 class="filter-shop__title">
                 category
                 <span></span>
-              </div>
-              <ul class="filter__items">
-                <li>
-                  <button class="filter__item" type="button">
-                    Chair
-                  </button>
-                </li>
-                <li>
-                  <button class="filter__item" type="button">
-                    Table
-                  </button>
-                </li>
-                <li>
-                  <button class="filter__item" type="button">
-                    Lamp
-                  </button>
-                </li>
-                <li>
-                  <button class="filter__item" type="button">
-                    Watch
-                  </button>
-                </li>
-                <li>
-                  <button class="filter__item" type="button">
-                    Clock
-                  </button>
-                </li>
-              </ul>
+              </h3>
+              <form class="filter-shop__items">
+                <label class="filter-shop__item">
+                  <input class="filter-shop__input" checked type="checkbox">
+                  <span class="filter-shop__checkbox">Chair</span>
+                </label>
+                <label class="filter-shop__item">
+                  <input class="filter-shop__input" type="checkbox">
+                  <span class="filter-shop__checkbox">Table</span>
+                </label>
+                <label class="filter-shop__item">
+                  <input class="filter-shop__input" type="checkbox">
+                  <span class="filter-shop__checkbox">Lamp</span>
+                </label>
+                <label class="filter-shop__item">
+                  <input class="filter-shop__input" type="checkbox">
+                  <span class="filter-shop__checkbox">Watch</span>
+                </label>
+                <label class="filter-shop__item">
+                  <input class="filter-shop__input" type="checkbox">
+                  <span class="filter-shop__checkbox">Clock</span>
+                </label>
+              </form>
+            </div>
+            <div class="filter-shop__price">
+              <h3 class="filter-shop__title">
+                price
+                <span></span>
+              </h3>
+              <form class="price-line " action="#">
+                <input class="price-line__input" type="text" data-min="0" data-max="1000" data-from="100" data-to="500">
+                <lable class="price-line__lable">
+                  <span class="price-line__from"></span>
+                  <span class="price-line__to"></span>
+                </lable>
+              </form>
+            </div>
+            <div class="filter-shop__brand">
+              <h3 class="filter-shop__title">
+                brand
+              </h3>
+              <form class="filter-shop__items">
+                <label class="filter-shop__item">
+                  <input class="filter-shop__input" checked type="checkbox">
+                  <div class="filter-shop__checkbox filter-shop__checkbox--numb">
+                    <span>RFL</span>
+                    <span>(10)</span>
+                  </div>
+                </label>
+                <label class="filter-shop__item">
+                  <input class="filter-shop__input" type="checkbox">
+                  <div class="filter-shop__checkbox filter-shop__checkbox--numb">
+                    <span>Brothers</span>
+                    <span>(21)</span>
+                  </div>
+                </label>
+                <label class="filter-shop__item">
+                  <input class="filter-shop__input" type="checkbox">
+                  <div class="filter-shop__checkbox filter-shop__checkbox--numb">
+                    <span>Regal</span>
+                    <span>(3)</span>
+                  </div>
+                </label>
+                <label class="filter-shop__item">
+                  <input class="filter-shop__input" type="checkbox">
+                  <div class="filter-shop__checkbox filter-shop__checkbox--numb">
+                    <span>Nadia</span>
+                    <span>(14)</span>
+                  </div>
+                </label>
+                <label class="filter-shop__item">
+                  <input class="filter-shop__input" type="checkbox">
+                  <div class="filter-shop__checkbox filter-shop__checkbox--numb">
+                    <span>Otobi</span>
+                    <span>(6)</span>
+                  </div>
+                </label>
+              </form>
+            </div>
+            <div class="filter-shop__products">
+              <h3 class="filter-shop__title">
+                recent products
+              </h3>
             </div>
           </div>
-          .
         </div>
       </div>
     </section>
@@ -169,7 +223,7 @@
 
   </main>
 
-  
+  <script src="js/main.min.js"></script>
 </body>
 
 </html>
