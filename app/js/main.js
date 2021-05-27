@@ -3,6 +3,9 @@
 $(function(){
 
 
+  $(".select-style").styler(); 
+
+
   $('.price-line__input').ionRangeSlider({
      type: "double",
      prefix: "$",

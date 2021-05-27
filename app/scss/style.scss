@@ -11,8 +11,17 @@
 @import 'index-page';
 
 
-.filter-shop {
+.shop {
   padding: 120px 0;
+
+  &__inner {
+    display: flex
+  }
+}
+
+.filter-shop {
+  padding: 0 0 120px 0;
+  margin-right: 30px;
   color: $sofs;
   max-width: 270px;
   width: 100%;
@@ -175,5 +184,84 @@
 
   &:hover {
     color: red;
+  }
+}
+
+
+.filter-top {
+  max-width: 870px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  align-items: flex-start;
+
+  &__buttons {
+    display: flex;
+
+    span {
+      margin-right: 15px;
+      @include rubik(400);
+      color: $sofs;
+    }
+  }
+
+  &__button {
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    border: none;
+    padding: 0;
+    line-height: 0;
+
+    &.filter-top__button--active {
+      svg {
+        fill: $button;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+}
+
+.jq-selectbox {
+
+  &:first-child {
+    margin-right: 30px;
+  }
+
+  &__select {
+    border: none;
+    background: none;
+    box-shadow: none;
+    text-shadow: none;
+    @include rubik(400);
+    color: $sofs;
+    padding: 0 30px 0 0;
+
+    &:hover {
+      background: none;
+    }
+  }
+
+  &__select-text {
+    overflow: inherit;
+    margin-right: 5px;
+  }
+
+  &__trigger {
+    border-left: none;
+  }
+
+  &__trigger-arrow {
+    position: absolute;
+    top: 14px;
+    right: 12px;
+    width: 10px;
+    height: 5px;
+    border: none;
+    background-image: url(../images/content/icons/arrow-down.svg);
   }
 }
