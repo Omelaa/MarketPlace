@@ -2,6 +2,40 @@
 
 $(function(){
 
+  $('.filter-top__button').on('click', function (){
+    $('.filter-top__button').removeClass('filter-top__button--active');
+      $(this).addClass('filter-top__button--active');
+  });
+
+  $('.button-list').on('click', function (){
+    $('.products__item, .product-card, .products__inner, .product-card__img, .product-card__name, .product-card__price--list, .product-card__text--list, .product-card__wrapper--list, .product-card__price, .product-card__stars, .product-card__link, .product-card__button, .product-card__box').addClass('product__item--list');
+  });
+
+  $('.button-grid').on('click', function (){
+    $('.products__item, .product-card, .products__inner, .product-card__img, .product-card__name, .product-card__price--list, .product-card__text--list, .product-card__wrapper--list, .product-card__price, .product-card__stars, .product-card__link, .product-card__button, .product-card__box').removeClass('product__item--list');
+  });
+
+
+  $(".product-card__stars").rateYo({
+        starWidth: "18px",
+        numStars: 5,
+        fullStar: true,
+        normalFill: '#ffcc00',
+        ratedFill: '#d6d6d6',
+        readOnly: true,
+        "starSvg": "<svg><use xlink: href = images/sprite.svg#star></use></svg>"
+  });
+
+  $(".filter-shop__stars").rateYo({
+        starWidth: "11px",
+        numStars: 5,
+        fullStar: true,
+        normalFill: '#ffcc00',
+        ratedFill: '#d6d6d6',
+        readOnly: true,
+        "starSvg": "<svg><use xlink: href = images/sprite.svg#star></use></svg>"
+  });
+
 
   $(".select-style").styler(); 
 
@@ -9,7 +43,7 @@ $(function(){
   $('.price-line__input').ionRangeSlider({
      type: "double",
      prefix: "$",
-     hide_min_max:	true,
+     hide_min_max: true,
      hide_from_to: true,
       onStart: function (data) {
        $('.price-line__from').text(data.from); 
@@ -19,7 +53,7 @@ $(function(){
       onChange: function (data) {
        $('.price-line__from').text(data.from); 
        $('.price-line__to').text(data.to); 
-       
+        
     },
     });
 
@@ -108,7 +142,7 @@ $(function(){
                   }
               };
 
-        var mixer1 = mixitup(containerEl1, config);
-        var mixer1 = mixitup(containerEl2, config);
+        var mixer1 = mixitup (containerEl1, config);
+        var mixer2 = mixitup (containerEl2, config);
           
 });

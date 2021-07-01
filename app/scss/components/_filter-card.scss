@@ -46,6 +46,26 @@
   }
 }
 
+.products__item,
+.product-card,
+.products__inner {
+
+  &.product__item--list {
+    width: 100%;
+    max-width: 870px;
+    grid-template-columns: 870px;
+    grid-template-rows: 510px;
+    display: inherit;
+  }
+}
+
+.products__item {
+
+  &.product__item--list {
+    height: 540px;
+  }
+}
+
 .product-card {
   display: flex;
   flex-direction: column;
@@ -59,6 +79,62 @@
   padding: 10px 25px 30px 25px;
   position: relative;
 
+  &.product__item--list {
+    display: flex;
+    flex-direction: row;
+    box-shadow: none;
+    padding: 5px 25px 30px 10px;
+  }
+
+  &__stars {
+    display: none;
+
+    &.product__item--list {
+      display: inherit;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__wrapper--list {
+    // display: none; 
+
+
+    &.product__item--list {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      text-align: start;
+      height: 350px;
+    }
+  }
+
+  &__price--list,
+  &__text--list {
+    display: none;
+
+    &.product__item--list {
+      display: block;
+    }
+  }
+
+  &__text--list {
+    @include rubik (400);
+    color: $sofs;
+    margin-bottom: 40px;
+  }
+
+  &__price--list {
+
+    &.product__item--list {
+      font-size: 30px;
+      line-height: 45px;
+      color: $listcolor;
+      @include rubik (400);
+      margin-bottom: 15px;
+    }
+  }
+
   &:hover {
     .product-card__box {
       opacity: 1;
@@ -68,9 +144,26 @@
 
   &__img {
     margin: auto 0;
-    object-fit: cover;
+    object-fit: contain;
     display: flex;
+    max-width: 200px;
+    max-height: 200px;
+
+
+    &.product__item--list {
+      min-width: 370px;
+      width: 100%;
+      min-height: 500px;
+      margin: 0;
+      object-fit: scale-down;
+      padding: 70px 10px;
+      border: 1px solid #f2f2f2;
+      margin-right: 55px;
+      display: flex;
+      justify-content: center;
+    }
   }
+
 
   &__name {
     color: $sofs;
@@ -78,6 +171,14 @@
     font-size: 16px;
     @include dmsans(500);
     @include text-clamp(1);
+
+    &.product__item--list {
+      font-size: 40px;
+      line-height: 1.5;
+      color: $listcolor;
+      @include rubik(400);
+      margin-bottom: 10px;
+    }
   }
 
   &__price {
@@ -86,6 +187,10 @@
     @include dmsans(700);
     @include text-clamp(1);
     max-width: 150px;
+
+    &.product__item--list {
+      display: none;
+    }
   }
 
   &__box {
@@ -96,10 +201,35 @@
     opacity: 0;
     transition: 0.5s;
 
+
     li {
       &:not(:last-child) {
         margin-right: 15px;
       }
+    }
+
+    &.product__item--list {
+      opacity: 1;
+      bottom: 100px;
+      right: 315px;
+
+    }
+  }
+
+  &__link {
+    &.product__item--list {
+      display: none;
+    }
+  }
+
+  &__button {
+    &.product__item--list {
+      box-shadow: none;
+      border-radius: 0;
+      border: 1px solid $listborder;
+      opacity: 1;
+      width: 50px;
+      height: 50px;
     }
   }
 
