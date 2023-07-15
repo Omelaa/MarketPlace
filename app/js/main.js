@@ -8,11 +8,16 @@ $(function(){
   });
 
   $('.button-list').on('click', function (){
-    $('.products__item, .product-card, .products__inner, .product-card__img, .product-card__name, .product-card__price--list, .product-card__text--list, .product-card__wrapper--list, .product-card__price, .product-card__stars, .product-card__link, .product-card__button, .product-card__box').addClass('product__item--list');
+    $('.products__item, .product-card, .products__inner, .product-card__img, .product-card__name, .product-card__price--list, .product-card__text--list, .product-card__wrapper--list, .product-card__price, .product-card__stars, .product-card__link, .product-card__button, .product-card__box, .pagination, .pagination__next, .pagination__link').addClass('product__item--list');
   });
 
   $('.button-grid').on('click', function (){
     $('.products__item, .product-card, .products__inner, .product-card__img, .product-card__name, .product-card__price--list, .product-card__text--list, .product-card__wrapper--list, .product-card__price, .product-card__stars, .product-card__link, .product-card__button, .product-card__box').removeClass('product__item--list');
+  });
+
+   $('.pagination__link').on('click', function (){
+    $('.pagination__link').removeClass('pagination__link--active');
+      $(this).addClass('pagination__link--active');
   });
 
 
